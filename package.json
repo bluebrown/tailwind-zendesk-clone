@@ -1,0 +1,19 @@
+{
+  "main": "index.html",
+  "scripts": {
+    "start": "NODE_ENV=development concurrently \"postcss tailwind.css -o dist/tailwind.css --watch\"  \"live-server .\"",
+    "build": "NODE_ENV=production postcss tailwind.css -o dist/tailwind.css"
+  },
+  "dependencies": {
+    "@fullhuman/postcss-purgecss": "2.1.2",
+    "autoprefixer": "9.7.6",
+    "concurrently": "5.1.0",
+    "live-server": "1.2.1",
+    "postcss-cli": "7.1.0",
+    "precss": "4.0.0",
+    "tailwindcss": "1.2.0"
+  },
+  "keywords": [],
+  "name": "cacs-baculte",
+  "description": ""
+}

@@ -1,0 +1,27 @@
+/* purgecss start ignore */
+@tailwind base;
+@tailwind components;
+/* purgecss end ignore */
+
+@tailwind utilities;
+
+body,
+strong,
+em,
+b,
+i,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+address,
+label,
+select,
+input,
+textarea,
+button {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Arial, sans-serif;
+}
