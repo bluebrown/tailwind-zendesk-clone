@@ -10,18 +10,19 @@
     <title>Tailwind Playground</title>
   </head>
 
-  <body class="antialiased h-full">
+  <body class="antialiased h-full text-gray-800">
     <div class="h-full w-full flex">
+      <!-- sidebar -->
       <nav
         class="flex-none flex flex-col items-center text-center
-        bg-teal-900 text-gray-400 border-r w-16"
+        bg-teal-1000 text-gray-400 border-r w-14"
       >
-        <div class="h-12 flex items-center w-full border-b border-teal-900">
+        <div class="h-12 flex items-center w-full border-b border-teal-700">
           <img class="h-8 w-8 mx-auto" src="assets/zendesk.png" />
         </div>
         <a
           href="#"
-          class="h-12 border-b border-teal-900 flex items-center text-white bg-teal-700 w-full"
+          class="h-12 border-b border-teal-1000 flex items-center text-white bg-teal-700 w-full"
         >
           <span class="mx-auto">
             <svg
@@ -39,7 +40,7 @@
         </a>
         <a
           href="#"
-          class="h-12 border-b border-teal-900 flex items-center hover:text-white w-full"
+          class="h-12 border-b border-teal-1000 flex items-center hover:text-white w-full"
         >
           <span class="mx-auto">
             <svg
@@ -57,7 +58,7 @@
         </a>
         <a
           href="#"
-          class="h-12 border-b border-teal-900 flex items-center hover:text-white w-full"
+          class="h-12 border-b border-teal-1000 flex items-center hover:text-white w-full"
         >
           <span class="mx-auto">
             <svg
@@ -75,7 +76,7 @@
         </a>
         <a
           href="#"
-          class="h-12 border-b border-teal-900 flex items-center hover:text-white w-full"
+          class="h-12 border-b border-teal-1000 flex items-center hover:text-white w-full"
         >
           <span class="mx-auto">
             <svg
@@ -93,7 +94,7 @@
         </a>
         <a
           href="#"
-          class="h-12 border-b border-teal-900 flex items-center hover:text-white w-full"
+          class="h-12 border-b border-teal-1000 flex items-center hover:text-white w-full"
         >
           <span class="mx-auto">
             <svg
@@ -110,48 +111,71 @@
           </span>
         </a>
       </nav>
-      <main class="flex-1 flex flex-col">
+      <!-- page  -->
+      <div class="flex-1 flex flex-col">
+        <!-- page nav -->
         <nav class="flex-none flex bg-white border-b h-12">
           <button class="flex items-center h-full px-3">
             <span>
               <svg
-                class="fill-current h-3 w-3"
-                fill-rule="evenodd"
-                clip-rule="evenodd"
+                class="fill-current h-2 w-2"
                 xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0  25 25"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
               >
-                <path d="M11 11v-11h1v11h11v1h-11v11h-1v-11h-11v-1h11z" />
+                <path d="M24 10h-10v-10h-4v10h-10v4h10v10h4v-10h10z" />
               </svg>
             </span>
-            <span class="ml-2 text-sm">Add</span>
+            <span class="ml-2 text-xs">Add</span>
           </button>
         </nav>
+
+        <!-- page header -->
         <header
           class="flex-none flex h-12 bg-gray-100 border-b px-3 items-center"
         >
           <h1 class="font-semibold">Dashboard</h1>
         </header>
-        <div class="flex-grow flex min-h-0">
+
+        <!-- main section -->
+        <section class="flex-grow flex min-h-0">
+          <!-- main section side menu -->
           <aside
-            class="flex flex-col p-3 w-64 bg-gray-100 border-r
+            class="flex flex-col p-3 w-72 bg-gray-100 border-r
             min-h-0 overflow-auto"
           >
             <label class="font-semibold text-sm mb-2"
               >Updates to your tickets</label
             >
-            <div class="border rounded-md p-3 bg-white">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-            </div>
-            <div class="border rounded-md p-3 bg-white">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-            </div>
-            <div class="border rounded-md p-3 bg-white">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-            </div>
+            <a
+              href="#"
+              class="border rounded-md p-3 bg-white flex text-sm 
+                  text-gray-700 mb-2 hover:border-zengreen"
+            >
+              <span class="flex-none pt-1 pr-2">
+                <img class="h-6 w-6 rounded-md" src="assets/avatar.png" />
+              </span>
+              <div class="flex-1">
+                <p>
+                  Tarun T <span class="font-semibold">commented</span> on "RE:
+                  WPMS issue".
+                </p>
+                <p class="leading-tight text-gray-600">
+                  Hi Mazhar, Please note this issue comes when user is not
+                  closing or logout sy…
+                </p>
+                <p class="text-gray-500 text-xs leading-loose">
+                  Friday 22:16
+                </p>
+              </div>
+            </a>
           </aside>
-          <section class="flex flex-col flex-auto">
-            <article class="flex-1 min-h-0 overflow-auto">
+
+          <!-- main section content -->
+          <main class="flex flex-col flex-auto">
+            <!-- main section content header -->
+            <header>
               <div class="bg-gray-100 border-b flex py-3 px-4">
                 <div class="mr-4">
                   <label class="text-xs font-semibold block mb-1"
@@ -163,17 +187,21 @@
                   <div class="flex">
                     <div
                       class="px-2 py-1 first:rounded-l-md border border-r-0 last:border-r last:rounded-r-md  bg-white flex flex-col items-center
-                      w-24"
+                        w-24"
                     >
-                      <p class="font-semibold">6</p>
-                      <p class="text-xs leading-tight uppercase">You</p>
+                      <p class="font-semibold">9</p>
+                      <p class="text-xs leading-tight uppercase text-gray-600">
+                        You
+                      </p>
                     </div>
                     <div
                       class="px-2 py-1 first:rounded-l-md border border-r-0 last:border-r last:rounded-r-md bg-white flex flex-col items-center
-                    w-24"
+                      w-24"
                     >
                       <p class="font-semibold">25</p>
-                      <p class="text-xs leading-tight uppercase">Groups</p>
+                      <p class="text-xs leading-tight uppercase text-gray-600">
+                        Groups
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -187,121 +215,133 @@
                   <div class="flex">
                     <div
                       class="px-2 py-1 first:rounded-l-md border border-r-0 last:border-r last:rounded-r-md  bg-white flex flex-col items-center
-                        w-24"
+                          w-24"
                     >
                       <p class="font-semibold">16</p>
-                      <p class="text-xs leading-tight uppercase">good</p>
+                      <p class="text-xs leading-tight uppercase text-gray-600">
+                        good
+                      </p>
+                    </div>
+                    <div
+                      class="px-2 py-1 first:rounded-l-md border border-r-0 last:border-r last:rounded-r-md bg-white flex flex-col items-center
+                        w-24"
+                    >
+                      <p class="font-semibold">2</p>
+                      <p class="text-xs leading-tight uppercase text-gray-600">
+                        bad
+                      </p>
                     </div>
                     <div
                       class="px-2 py-1 first:rounded-l-md border border-r-0 last:border-r last:rounded-r-md bg-white flex flex-col items-center
                       w-24"
                     >
-                      <p class="font-semibold">2</p>
-                      <p class="text-xs leading-tight uppercase">bad</p>
-                    </div>
-                    <div
-                      class="px-2 py-1 first:rounded-l-md border border-r-0 last:border-r last:rounded-r-md bg-white flex flex-col items-center
-                    w-24"
-                    >
                       <p class="font-semibold">32</p>
-                      <p class="text-xs leading-tight uppercase">solved</p>
+                      <p class="text-xs leading-tight uppercase text-gray-600">
+                        solved
+                      </p>
                     </div>
                   </div>
                 </div>
               </div>
               <div class="bg-white border-b flex items-center py-1 px-4">
                 <div>
-                  <h2 class="font-semibold">
-                    Tickets requiring your attention (3)
+                  <h2 class="font-semibold text-sm">
+                    Tickets requiring your attention (9)
                   </h2>
                 </div>
                 <div class="ml-auto">
-                  <button class="border rounded-md px-3 py-1">Play</button>
+                  <button class="border rounded-md px-3 py-1 text-sm">
+                    Play
+                  </button>
                 </div>
               </div>
+            </header>
+
+            <!-- table header outside of overflow container -->
+            <!-- add right padding with js if overflow container has scrollbar to align columns  -->
+            <div class="px-4">
+              <table class="w-full flex flex-col">
+                <thead class="flex flex-col">
+                  <tr class="border-b flex">
+                    <th class="font-semibold text-sm text-left py-3 px-1  w-24">
+                      <input type="checkbox" name="" id="" />
+                    </th>
+                    <th class="font-semibold text-sm text-left py-3 px-1 w-24">
+                      ID
+                    </th>
+                    <th
+                      class="font-semibold text-sm text-left py-3 px-1 flex-1"
+                    >
+                      Subject
+                    </th>
+                    <th
+                      class="font-semibold text-sm text-left py-3 px-1 flex-1"
+                    >
+                      Requester
+                    </th>
+                    <th
+                      class="font-semibold text-sm text-left py-3 px-1 flex-1"
+                    >
+                      Requester updated
+                    </th>
+                    <th
+                      class="font-semibold text-sm text-left py-3 px-1 flex-1"
+                    >
+                      Group
+                    </th>
+                    <th
+                      class="font-semibold text-sm text-left py-3 px-1 flex-1"
+                    >
+                      Assignee
+                    </th>
+                  </tr>
+                </thead>
+              </table>
+            </div>
+
+            <!-- main section content overflow container -->
+            <article class="flex-1 min-h-0 overflow-auto">
               <section class="px-4">
-                <table class="w-full">
-                  <thead>
-                    <tr class="border-b">
-                      <th class="text-gray-800 text-sm text-left w-8 p-3">
-                        <input type="checkbox" name="" id="" />
-                      </th>
-                      <th class="text-gray-800 text-sm text-left p-3">
-                        ID
-                      </th>
-                      <th class="text-gray-800 text-sm text-left p-3">
-                        Subject
-                      </th>
-                      <th class="text-gray-800 text-sm text-left p-3">
-                        Requester
-                      </th>
-                      <th class="text-gray-800 text-sm text-left p-3">
-                        Requester updated
-                      </th>
-                      <th class="text-gray-800 text-sm text-left">Group</th>
-                      <th class="text-gray-800 text-sm text-left">Assignee</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr class="border-b">
+                <table class="w-full flex flex-col text-base">
+                  <tbody class="flex flex-col">
+                    <tr class="border-b flex">
                       <th
-                        class="bg-gray-100 text-xs text-left px-3 py-2"
+                        class="bg-gray-100 text-xs text-left px-3 py-2 flex-1"
                         colspan="7"
                       >
                         <span class="font-normal mr-1">Priority</span
                         ><span>Low</span>
                       </th>
                     </tr>
-                    <tr class="hover:bg-blue-100 border-b">
-                      <td class="p-3 w-8">
+                    <tr class="hover:bg-blue-100 border-b flex">
+                      <td class="py-3 px-1 w-24 flex">
                         <input type="checkbox" name="" id="" />
+                        <div class="ml-auto">
+                          <span
+                            style="padding: 1px 5px"
+                            class="text-xs font-mono
+                             border rounded-md bg-red-600 text-white leading-none"
+                            >O</span
+                          >
+                        </div>
                       </td>
-                      <td class="p-3">12534</td>
-                      <td class="p-3">My Bike was stolen</td>
-                      <td class="p-3">Jim Beam</td>
-                      <td class="p-3">01/01/1970</td>
-                      <td class="p-3">Team Awesome</td>
-                      <td class="p-3">Nico Braun</td>
-                    </tr>
-                    <tr class="hover:bg-blue-100 border-b">
-                      <td class="p-3 w-8">
-                        <input type="checkbox" name="" id="" />
-                      </td>
-                      <td class="p-3">12534</td>
-                      <td class="p-3">My Bike was stolen</td>
-                      <td class="p-3">Jim Beam</td>
-                      <td class="p-3">01/01/1970</td>
-                      <td class="p-3">Team Awesome</td>
-                      <td class="p-3">Nico Braun</td>
-                    </tr>
-                    <tr class="border-b">
-                      <th
-                        class="bg-gray-100 text-xs text-left px-3 py-2"
-                        colspan="7"
-                      >
-                        <span class="font-normal mr-1">Priority</span
-                        ><span>Medium</span>
-                      </th>
-                    </tr>
-                    <tr class="hover:bg-blue-100 border-b">
-                      <td class="p-3 w-8">
-                        <input type="checkbox" name="" id="" />
-                      </td>
-                      <td class="p-3">12534</td>
-                      <td class="p-3">My Bike was stolen</td>
-                      <td class="p-3">Jim Beam</td>
-                      <td class="p-3">01/01/1970</td>
-                      <td class="p-3">Team Awesome</td>
-                      <td class="p-3">Nico Braun</td>
+                      <td class="py-3 px-1 w-24">#12534</td>
+                      <td class="py-3 px-1 flex-1">My Bike was stolen</td>
+                      <td class="py-3 px-1 flex-1">Jim Beam</td>
+                      <td class="py-3 px-1 flex-1">01/01/1970</td>
+                      <td class="py-3 px-1 flex-1">Team Awesome</td>
+                      <td class="py-3 px-1 flex-1">Nico Braun</td>
                     </tr>
                   </tbody>
                 </table>
               </section>
             </article>
+
+            <!-- main section content footer -->
             <footer class="flex p-3 bg-white border-t hidden">footer</footer>
-          </section>
-        </div>
-      </main>
+          </main>
+        </section>
+      </div>
     </div>
   </body>
 </html>
