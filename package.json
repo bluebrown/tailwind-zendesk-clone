@@ -1,8 +1,8 @@
 {
-  "main": "index.html",
+  "main": "public/index.html",
   "scripts": {
-    "start": "NODE_ENV=development concurrently \"postcss tailwind.css -o dist/tailwind.css --watch\"  \"live-server .\"",
-    "build": "NODE_ENV=production postcss tailwind.css -o dist/tailwind.css"
+    "start": "concurrently \"postcss tailwind.css -o public/tailwind.css --watch\"  \"live-server ./public/\"",
+    "build": "postcss tailwind.css -o public/tailwind.css"
   },
   "dependencies": {
     "@fullhuman/postcss-purgecss": "2.1.2",
@@ -14,6 +14,6 @@
     "tailwindcss": "1.2.0"
   },
   "keywords": [],
-  "name": "cacs-baculte",
+  "name": "tailwind-zendesk-clone",
   "description": ""
 }
