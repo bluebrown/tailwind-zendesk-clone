@@ -26,8 +26,6 @@ module.exports = {
     }
   },
   variants: {
-    borderWidth: ["responsive", "last"],
-    borderRadius: ["responsive", "first", "last"],
     cursor: ["responsive", "focus"],
     width: ["responsive", "focus"],
     display: ['responsive', 'group-hover'],
