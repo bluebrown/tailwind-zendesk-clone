@@ -8,15 +8,24 @@
     />
     <link rel="stylesheet" href="./tailwind.css" />
     <title>Chi Desk</title>
+    <style>
+      body, strong, em, b, i, h1, h2, h3, h4, h5, h6, address, label, select, input, textarea, button {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                     Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Arial, sans-serif;
+      }
+      .group:hover .group-hover\:block { display: block;}
+      .focus\:cursor-text:focus {cursor: text;}
+      .focus\:w-56:focus {width: 14rem;}
+    </style>
   </head>
 
   <body class="antialiased h-full text-gray-800">
     <div class="h-full w-full flex">
       <!-- sidebar -->
       <nav
-        class="flex-none flex flex-col items-center text-center bg-teal-900 text-gray-400 border-r w-sidebar"
+        class="flex-none flex flex-col items-center text-center bg-teal-900 text-gray-400 border-r"
       >
-        <div class="h-12 flex items-center w-full border-b border-teal-700">
+        <div class="h-12 flex items-center w-full border-b border-teal-700 px-4">
           <img class="h-6 w-6 mx-auto" src="assets/leaves.png" />
         </div>
         <a
@@ -140,9 +149,9 @@
                 </span>
                 <span class="ml-2 text-xs">Add</span>
               </button>
-              <span class="absolute p-1 hidden group-hover:inline">
+              <span class="absolute p-1 hidden group-hover:block">
                 <div
-                  class="bg-white border rounded-md w-screen w-dropdown-large shadow-lg text-base"
+                  class="bg-white border rounded-md w-screen max-w-sm w-dropdown-large shadow-lg text-base"
                 >
                   <header class="px-4 py-3 border-b">
                     <h3 class="text-sm font-semibold">New</h3>
@@ -333,7 +342,7 @@
         <section class="flex-grow flex min-h-0">
           <!-- main section side menu -->
           <aside
-            class="flex flex-col p-3 w-menu bg-gray-100 border-r min-h-0 overflow-auto"
+            class="flex flex-col p-3 w-full max-w-xs flex-none bg-gray-100 border-r min-h-0 overflow-auto"
           >
             <label class="font-semibold text-sm mb-2"
               >Updates to your tickets</label
@@ -622,14 +631,14 @@
                       class="absolute pt-1 right-0 transform translate-x-40 mx-auto hidden group-hover:block"
                     >
                       <div
-                        class="border rounded-md rounded-t-lg shadow-lg bg-white w-menu"
+                        class="border rounded-md rounded-t-lg shadow-lg bg-white w-full max-w-sm w-screen text-sm"
                       >
                         <header
-                          class="font-semibold text-base rounded-t-lg bg-gray-300 p-3 border-b"
+                          class="font-semibold rounded-t-lg bg-gray-300 p-3 border-b"
                         >
                           People are waiting for replies!
                         </header>
-                        <div class="p-3 text-base">
+                        <div class="p-3">
                           <p class="mb-3">
                             These are new or open tickets that are assigned to
                             you, unassinged in your group(s) or not assigned to
@@ -699,7 +708,7 @@
             <!-- main section content overflow container -->
             <article class="flex-1 min-h-0 overflow-auto">
               <section class="px-4">
-                <table class="w-full flex flex-col text-base">
+                <table class="w-full flex flex-col text-sm">
                   <tbody class="flex flex-col">
                     <tr class="border-b flex">
                       <th
