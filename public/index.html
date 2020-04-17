@@ -9,13 +9,36 @@
     <link rel="stylesheet" href="./tailwind.css" />
     <title>Chi Desk</title>
     <style>
-      body, strong, em, b, i, h1, h2, h3, h4, h5, h6, address, label, select, input, textarea, button {
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-                     Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Arial, sans-serif;
+      body,
+      strong,
+      em,
+      b,
+      i,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      address,
+      label,
+      select,
+      input,
+      textarea,
+      button {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Arial,
+          sans-serif;
       }
-      .group:hover .group-hover\:block { display: block;}
-      .focus\:cursor-text:focus {cursor: text;}
-      .focus\:w-56:focus {width: 14rem;}
+      .group:hover .group-hover\:block {
+        display: block;
+      }
+      .focus\:cursor-text:focus {
+        cursor: text;
+      }
+      .focus\:w-56:focus {
+        width: 14rem;
+      }
     </style>
   </head>
 
@@ -25,7 +48,9 @@
       <nav
         class="flex-none flex flex-col items-center text-center bg-teal-900 text-gray-400 border-r"
       >
-        <div class="h-12 flex items-center w-full border-b border-teal-700 px-4">
+        <div
+          class="h-12 flex items-center w-full border-b border-teal-700 px-4"
+        >
           <img class="h-6 w-6 mx-auto" src="assets/leaves.png" />
         </div>
         <a
@@ -135,7 +160,10 @@
           <div>
             <!-- add button -->
             <span class="group">
-              <button class="flex items-center h-full px-3">
+              <button
+                class="flex items-center h-full px-3"
+                aria-haspopup="listbox"
+              >
                 <span class="group relative">
                   <svg
                     class="fill-current h-2 w-2"
@@ -151,30 +179,48 @@
               </button>
               <span class="absolute p-1 hidden group-hover:block">
                 <div
+                  tabindex="-1"
+                  role="listbox"
                   class="bg-white border rounded-md w-screen max-w-sm w-dropdown-large shadow-lg text-base"
                 >
-                  <header class="px-4 py-3 border-b">
-                    <h3 class="text-sm font-semibold">New</h3>
-                  </header>
-                  <ul class="leading-relaxed py-2">
-                    <li class="px-6 py-1 my-1 hover:bg-blue-100 cursor-pointer">
+                  <ul class="outline-none leading-relaxed py-2">
+                    <li>
+                      <label
+                        class="block px-4 py-3 border-b text-sm font-semibold"
+                        >New</label
+                      >
+                    </li>
+                    <li
+                      role="option"
+                      class="px-6 py-1 my-1 hover:bg-blue-100 cursor-pointer"
+                    >
                       Ticket
                     </li>
-                    <li class="px-6 py-1 my-1 hover:bg-blue-100 cursor-pointer">
+                    <li
+                      role="option"
+                      class="px-6 py-1 my-1 hover:bg-blue-100 cursor-pointer"
+                    >
                       User
                     </li>
-                    <li class="px-6 py-1 my-1 hover:bg-blue-100 cursor-pointer">
+                    <li
+                      role="option"
+                      class="px-6 py-1 my-1 hover:bg-blue-100 cursor-pointer"
+                    >
                       Organization
                     </li>
-                    <li class="px-6 py-1 my-1 hover:bg-blue-100 cursor-pointer">
+                    <li
+                      role="option"
+                      class="px-6 py-1 my-1 hover:bg-blue-100 cursor-pointer"
+                    >
                       Search
                     </li>
-                  </ul>
-                  <header class="px-4 py-3 border-b">
-                    <h3 class="text-sm font-semibold">Recently Viewed</h3>
-                  </header>
-                  <ul class="leading-relaxed py-2">
-                    <li class="px-6 py-1 my-1 hover:bg-blue-100">
+                    <li>
+                      <label
+                        class="block px-4 py-3 border-b text-sm font-semibold"
+                        >Recently Viewed</label
+                      >
+                    </li>
+                    <li role="option" class="px-6 py-1 my-1 hover:bg-blue-100">
                       <div class="flex">
                         <div class="pr-2">
                           <span
@@ -194,7 +240,7 @@
                         </div>
                       </div>
                     </li>
-                    <li class="px-6 py-1 my-1 hover:bg-blue-100">
+                    <li role="option" class="px-6 py-1 my-1 hover:bg-blue-100">
                       <div class="flex">
                         <div class="pr-2">
                           <span
@@ -214,7 +260,7 @@
                         </div>
                       </div>
                     </li>
-                    <li class="px-6 py-1 my-1 hover:bg-blue-100">
+                    <li role="option" class="px-6 py-1 my-1 hover:bg-blue-100">
                       <div class="flex">
                         <div class="pr-2">
                           <span
@@ -234,7 +280,7 @@
                         </div>
                       </div>
                     </li>
-                    <li class="px-6 py-1 my-1 hover:bg-blue-100">
+                    <li role="option" class="px-6 py-1 my-1 hover:bg-blue-100">
                       <div class="flex">
                         <div class="pr-2">
                           <span
@@ -344,9 +390,7 @@
           <aside
             class="flex flex-col p-3 w-full max-w-xs flex-none bg-gray-100 border-r min-h-0 overflow-auto"
           >
-            <label class="font-semibold text-sm mb-2"
-              >Updates to your tickets</label
-            >
+            <h2 class="font-semibold text-sm mb-2">Updates to your tickets</h2>
 
             <article
               class="cursor-pointer border rounded-md p-3 bg-white flex text-sm text-gray-700 mb-2 hover:border-green-500"
@@ -706,274 +750,285 @@
             </div>
 
             <!-- main section content overflow container -->
-            <article class="flex-1 min-h-0 overflow-auto">
-              <section class="px-4">
-                <table class="w-full flex flex-col text-sm">
-                  <tbody class="flex flex-col">
-                    <tr class="border-b flex">
-                      <th
-                        class="bg-gray-100 text-xs text-left px-3 py-2 flex-1"
-                        colspan="7"
-                      >
-                        <span class="font-normal mr-1">Priority</span
-                        ><span>Low</span>
-                      </th>
-                    </tr>
-                    <tr class="hover:bg-blue-100 border-b flex">
-                      <td class="py-3 pl-3 pr-1 w-24 flex">
-                        <input class="mt-1" type="checkbox" name="" id="" />
-                        <div class="ml-auto">
-                          <span
-                            style="padding: 1px 5px;"
-                            class="text-xs font-mono border rounded-md bg-red-600 text-white leading-none"
-                          >O</span>
-                        </div>
-                      </td>
-                      <td class="py-3 px-1 w-24">#12534</td>
-                      <td class="py-3 px-1 flex-1">My Bike was stolen</td>
-                      <td class="py-3 px-1 flex-1">Jim Beam</td>
-                      <td class="py-3 px-1 flex-1">01/01/1970</td>
-                      <td class="py-3 px-1 flex-1">Team Awesome</td>
-                      <td class="py-3 px-1 flex-1">Nico Braun</td>
-                    </tr>
-                    <tr class="hover:bg-blue-100 border-b flex">
-                      <td class="py-3 pl-3 pr-1 w-24 flex">
-                        <input class="mt-1" type="checkbox" name="" id="" />
-                        <div class="ml-auto">
-                          <span
-                            style="padding: 1px 5px;"
-                            class="text-xs font-mono border rounded-md bg-red-600 text-white leading-none"
-                            >O</span
-                          >
-                        </div>
-                      </td>
-                      <td class="py-3 px-1 w-24">#12534</td>
-                      <td class="py-3 px-1 flex-1">My Bike was stolen</td>
-                      <td class="py-3 px-1 flex-1">Jim Beam</td>
-                      <td class="py-3 px-1 flex-1">01/01/1970</td>
-                      <td class="py-3 px-1 flex-1">Team Awesome</td>
-                      <td class="py-3 px-1 flex-1">Nico Braun</td>
-                    </tr>
-                    <tr class="hover:bg-blue-100 border-b flex">
-                      <td class="py-3 pl-3 pr-1 w-24 flex">
-                        <input class="mt-1" type="checkbox" name="" id="" />
-                        <div class="ml-auto">
-                          <span
-                            style="padding: 1px 5px;"
-                            class="text-xs font-mono border rounded-md bg-red-600 text-white leading-none"
-                            >O</span
-                          >
-                        </div>
-                      </td>
-                      <td class="py-3 px-1 w-24">#12534</td>
-                      <td class="py-3 px-1 flex-1">My Bike was stolen</td>
-                      <td class="py-3 px-1 flex-1">Jim Beam</td>
-                      <td class="py-3 px-1 flex-1">01/01/1970</td>
-                      <td class="py-3 px-1 flex-1">Team Awesome</td>
-                      <td class="py-3 px-1 flex-1">Nico Braun</td>
-                    </tr>
-                    <tr class="border-b flex">
-                      <th
-                        class="bg-gray-100 text-xs text-left px-3 py-2 flex-1"
-                        colspan="7"
-                      >
-                        <span class="font-normal mr-1">Priority</span
-                        ><span>Medium</span>
-                      </th>
-                    </tr>
-                    <tr class="hover:bg-blue-100 border-b flex">
-                      <td class="py-3 pl-3 pr-1 w-24 flex">
-                        <input class="mt-1" type="checkbox" name="" id="" />
-                        <div class="ml-auto">
-                          <span
-                            style="padding: 1px 5px;"
-                            class="text-xs font-mono border rounded-md bg-red-600 text-white leading-none"
-                            >O</span
-                          >
-                        </div>
-                      </td>
-                      <td class="py-3 px-1 w-24">#12534</td>
-                      <td class="py-3 px-1 flex-1">My Bike was stolen</td>
-                      <td class="py-3 px-1 flex-1">Jim Beam</td>
-                      <td class="py-3 px-1 flex-1">01/01/1970</td>
-                      <td class="py-3 px-1 flex-1">Team Awesome</td>
-                      <td class="py-3 px-1 flex-1">Nico Braun</td>
-                    </tr>
-                    <tr class="hover:bg-blue-100 border-b flex">
-                      <td class="py-3 pl-3 pr-1 w-24 flex">
-                        <input class="mt-1" type="checkbox" name="" id="" />
-                        <div class="ml-auto">
-                          <span
-                            style="padding: 1px 5px;"
-                            class="text-xs font-mono border rounded-md bg-red-600 text-white leading-none"
-                            >O</span
-                          >
-                        </div>
-                      </td>
-                      <td class="py-3 px-1 w-24">#12534</td>
-                      <td class="py-3 px-1 flex-1">My Bike was stolen</td>
-                      <td class="py-3 px-1 flex-1">Jim Beam</td>
-                      <td class="py-3 px-1 flex-1">01/01/1970</td>
-                      <td class="py-3 px-1 flex-1">Team Awesome</td>
-                      <td class="py-3 px-1 flex-1">Nico Braun</td>
-                    </tr>
-                    <tr class="hover:bg-blue-100 border-b flex">
-                      <td class="py-3 pl-3 pr-1 w-24 flex">
-                        <input class="mt-1" type="checkbox" name="" id="" />
-                        <div class="ml-auto">
-                          <span
-                            style="padding: 1px 5px;"
-                            class="text-xs font-mono border rounded-md bg-red-600 text-white leading-none"
-                            >O</span
-                          >
-                        </div>
-                      </td>
-                      <td class="py-3 px-1 w-24">#12534</td>
-                      <td class="py-3 px-1 flex-1">My Bike was stolen</td>
-                      <td class="py-3 px-1 flex-1">Jim Beam</td>
-                      <td class="py-3 px-1 flex-1">01/01/1970</td>
-                      <td class="py-3 px-1 flex-1">Team Awesome</td>
-                      <td class="py-3 px-1 flex-1">Nico Braun</td>
-                    </tr>
-                    <tr class="hover:bg-blue-100 border-b flex">
-                      <td class="py-3 pl-3 pr-1 w-24 flex">
-                        <input class="mt-1" type="checkbox" name="" id="" />
-                        <div class="ml-auto">
-                          <span
-                            style="padding: 1px 5px;"
-                            class="text-xs font-mono border rounded-md bg-red-600 text-white leading-none"
-                            >O</span
-                          >
-                        </div>
-                      </td>
-                      <td class="py-3 px-1 w-24">#12534</td>
-                      <td class="py-3 px-1 flex-1">My Bike was stolen</td>
-                      <td class="py-3 px-1 flex-1">Jim Beam</td>
-                      <td class="py-3 px-1 flex-1">01/01/1970</td>
-                      <td class="py-3 px-1 flex-1">Team Awesome</td>
-                      <td class="py-3 px-1 flex-1">Nico Braun</td>
-                    </tr>
-                    <tr class="border-b flex">
-                      <th
-                        class="bg-gray-100 text-xs text-left px-3 py-2 flex-1"
-                        colspan="7"
-                      >
-                        <span class="font-normal mr-1">Priority</span
-                        ><span>High</span>
-                      </th>
-                    </tr>
-                    <tr class="hover:bg-blue-100 border-b flex">
-                      <td class="py-3 pl-3 pr-1 w-24 flex">
-                        <input class="mt-1" type="checkbox" name="" id="" />
-                        <div class="ml-auto">
-                          <span
-                            style="padding: 1px 5px;"
-                            class="text-xs font-mono border rounded-md bg-red-600 text-white leading-none"
-                            >O</span
-                          >
-                        </div>
-                      </td>
-                      <td class="py-3 px-1 w-24">#12534</td>
-                      <td class="py-3 px-1 flex-1">My Bike was stolen</td>
-                      <td class="py-3 px-1 flex-1">Jim Beam</td>
-                      <td class="py-3 px-1 flex-1">01/01/1970</td>
-                      <td class="py-3 px-1 flex-1">Team Awesome</td>
-                      <td class="py-3 px-1 flex-1">Nico Braun</td>
-                    </tr>
-                    <tr class="hover:bg-blue-100 border-b flex">
-                      <td class="py-3 pl-3 pr-1 w-24 flex">
-                        <input class="mt-1" type="checkbox" name="" id="" />
-                        <div class="ml-auto">
-                          <span
-                            style="padding: 1px 5px;"
-                            class="text-xs font-mono border rounded-md bg-red-600 text-white leading-none"
-                            >O</span
-                          >
-                        </div>
-                      </td>
-                      <td class="py-3 px-1 w-24">#12534</td>
-                      <td class="py-3 px-1 flex-1">My Bike was stolen</td>
-                      <td class="py-3 px-1 flex-1">Jim Beam</td>
-                      <td class="py-3 px-1 flex-1">01/01/1970</td>
-                      <td class="py-3 px-1 flex-1">Team Awesome</td>
-                      <td class="py-3 px-1 flex-1">Nico Braun</td>
-                    </tr>
-                    <tr class="hover:bg-blue-100 border-b flex">
-                      <td class="py-3 pl-3 pr-1 w-24 flex">
-                        <input class="mt-1" type="checkbox" name="" id="" />
-                        <div class="ml-auto">
-                          <span
-                            style="padding: 1px 5px;"
-                            class="text-xs font-mono border rounded-md bg-red-600 text-white leading-none"
-                            >O</span
-                          >
-                        </div>
-                      </td>
-                      <td class="py-3 px-1 w-24">#12534</td>
-                      <td class="py-3 px-1 flex-1">My Bike was stolen</td>
-                      <td class="py-3 px-1 flex-1">Jim Beam</td>
-                      <td class="py-3 px-1 flex-1">01/01/1970</td>
-                      <td class="py-3 px-1 flex-1">Team Awesome</td>
-                      <td class="py-3 px-1 flex-1">Nico Braun</td>
-                    </tr>
-                    <tr class="hover:bg-blue-100 border-b flex">
-                      <td class="py-3 pl-3 pr-1 w-24 flex">
-                        <input class="mt-1" type="checkbox" name="" id="" />
-                        <div class="ml-auto">
-                          <span
-                            style="padding: 1px 5px;"
-                            class="text-xs font-mono border rounded-md bg-red-600 text-white leading-none"
-                            >O</span
-                          >
-                        </div>
-                      </td>
-                      <td class="py-3 px-1 w-24">#12534</td>
-                      <td class="py-3 px-1 flex-1">My Bike was stolen</td>
-                      <td class="py-3 px-1 flex-1">Jim Beam</td>
-                      <td class="py-3 px-1 flex-1">01/01/1970</td>
-                      <td class="py-3 px-1 flex-1">Team Awesome</td>
-                      <td class="py-3 px-1 flex-1">Nico Braun</td>
-                    </tr>
-                    <tr class="hover:bg-blue-100 border-b flex">
-                      <td class="py-3 pl-3 pr-1 w-24 flex">
-                        <input class="mt-1" type="checkbox" name="" id="" />
-                        <div class="ml-auto">
-                          <span
-                            style="padding: 1px 5px;"
-                            class="text-xs font-mono border rounded-md bg-red-600 text-white leading-none"
-                            >O</span
-                          >
-                        </div>
-                      </td>
-                      <td class="py-3 px-1 w-24">#12534</td>
-                      <td class="py-3 px-1 flex-1">My Bike was stolen</td>
-                      <td class="py-3 px-1 flex-1">Jim Beam</td>
-                      <td class="py-3 px-1 flex-1">01/01/1970</td>
-                      <td class="py-3 px-1 flex-1">Team Awesome</td>
-                      <td class="py-3 px-1 flex-1">Nico Braun</td>
-                    </tr>
-                    <tr class="hover:bg-blue-100 border-b flex">
-                      <td class="py-3 pl-3 pr-1 w-24 flex">
-                        <input class="mt-1" type="checkbox" name="" id="" />
-                        <div class="ml-auto">
-                          <span
-                            style="padding: 1px 5px;"
-                            class="text-xs font-mono border rounded-md bg-red-600 text-white leading-none"
-                            >O</span
-                          >
-                        </div>
-                      </td>
-                      <td class="py-3 px-1 w-24">#12534</td>
-                      <td class="py-3 px-1 flex-1">My Bike was stolen</td>
-                      <td class="py-3 px-1 flex-1">Jim Beam</td>
-                      <td class="py-3 px-1 flex-1">01/01/1970</td>
-                      <td class="py-3 px-1 flex-1">Team Awesome</td>
-                      <td class="py-3 px-1 flex-1">Nico Braun</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </section>
-            </article>
+            <div class="flex-1 min-h-0 overflow-auto px-4">
+              <table class="w-full flex flex-col text-sm">
+                <tbody class="flex flex-col">
+                  <tr class="border-b flex">
+                    <th
+                      class="bg-gray-100 text-xs text-left px-3 py-2 flex-1"
+                      colspan="7"
+                    >
+                      <span class="font-normal mr-1">Priority</span
+                      ><span>Low</span>
+                    </th>
+                  </tr>
+                  <tr class="hover:bg-blue-100 border-b flex">
+                    <td headers="select" class="py-3 pl-3 pr-1 w-24 flex">
+                      <input class="mt-1" type="checkbox" />
+                      <div class="ml-auto">
+                        <span
+                          style="padding: 1px 5px;"
+                          class="text-xs font-mono border rounded-md bg-red-600 text-white leading-none"
+                          >O</span
+                        >
+                      </div>
+                    </td>
+                    <td headers="ticket id" class="py-3 px-1 w-24">
+                      #12534
+                    </td>
+                    <td class="py-3 px-1 flex-1">
+                      My Bike was stolen
+                    </td>
+                    <td class="py-3 px-1 flex-1">
+                      Jim Beam
+                    </td>
+                    <td class="py-3 px-1 flex-1">
+                      01/01/1970
+                    </td>
+                    <td class="py-3 px-1 flex-1">
+                      Team Awesome
+                    </td>
+                    <td class="py-3 px-1 flex-1">
+                      Nico Braun
+                    </td>
+                  </tr>
+                  <tr class="hover:bg-blue-100 border-b flex">
+                    <td class="py-3 pl-3 pr-1 w-24 flex">
+                      <input class="mt-1" type="checkbox" name="" id="" />
+                      <div class="ml-auto">
+                        <span
+                          style="padding: 1px 5px;"
+                          class="text-xs font-mono border rounded-md bg-red-600 text-white leading-none"
+                          >O</span
+                        >
+                      </div>
+                    </td>
+                    <td class="py-3 px-1 w-24">#12534</td>
+                    <td class="py-3 px-1 flex-1">My Bike was stolen</td>
+                    <td class="py-3 px-1 flex-1">Jim Beam</td>
+                    <td class="py-3 px-1 flex-1">01/01/1970</td>
+                    <td class="py-3 px-1 flex-1">Team Awesome</td>
+                    <td class="py-3 px-1 flex-1">Nico Braun</td>
+                  </tr>
+                  <tr class="hover:bg-blue-100 border-b flex">
+                    <td class="py-3 pl-3 pr-1 w-24 flex">
+                      <input class="mt-1" type="checkbox" name="" id="" />
+                      <div class="ml-auto">
+                        <span
+                          style="padding: 1px 5px;"
+                          class="text-xs font-mono border rounded-md bg-red-600 text-white leading-none"
+                          >O</span
+                        >
+                      </div>
+                    </td>
+                    <td class="py-3 px-1 w-24">#12534</td>
+                    <td class="py-3 px-1 flex-1">My Bike was stolen</td>
+                    <td class="py-3 px-1 flex-1">Jim Beam</td>
+                    <td class="py-3 px-1 flex-1">01/01/1970</td>
+                    <td class="py-3 px-1 flex-1">Team Awesome</td>
+                    <td class="py-3 px-1 flex-1">Nico Braun</td>
+                  </tr>
+                  <tr class="border-b flex">
+                    <th
+                      class="bg-gray-100 text-xs text-left px-3 py-2 flex-1"
+                      colspan="7"
+                    >
+                      <span class="font-normal mr-1">Priority</span
+                      ><span>Medium</span>
+                    </th>
+                  </tr>
+                  <tr class="hover:bg-blue-100 border-b flex">
+                    <td class="py-3 pl-3 pr-1 w-24 flex">
+                      <input class="mt-1" type="checkbox" name="" id="" />
+                      <div class="ml-auto">
+                        <span
+                          style="padding: 1px 5px;"
+                          class="text-xs font-mono border rounded-md bg-red-600 text-white leading-none"
+                          >O</span
+                        >
+                      </div>
+                    </td>
+                    <td class="py-3 px-1 w-24">#12534</td>
+                    <td class="py-3 px-1 flex-1">My Bike was stolen</td>
+                    <td class="py-3 px-1 flex-1">Jim Beam</td>
+                    <td class="py-3 px-1 flex-1">01/01/1970</td>
+                    <td class="py-3 px-1 flex-1">Team Awesome</td>
+                    <td class="py-3 px-1 flex-1">Nico Braun</td>
+                  </tr>
+                  <tr class="hover:bg-blue-100 border-b flex">
+                    <td class="py-3 pl-3 pr-1 w-24 flex">
+                      <input class="mt-1" type="checkbox" name="" id="" />
+                      <div class="ml-auto">
+                        <span
+                          style="padding: 1px 5px;"
+                          class="text-xs font-mono border rounded-md bg-red-600 text-white leading-none"
+                          >O</span
+                        >
+                      </div>
+                    </td>
+                    <td class="py-3 px-1 w-24">#12534</td>
+                    <td class="py-3 px-1 flex-1">My Bike was stolen</td>
+                    <td class="py-3 px-1 flex-1">Jim Beam</td>
+                    <td class="py-3 px-1 flex-1">01/01/1970</td>
+                    <td class="py-3 px-1 flex-1">Team Awesome</td>
+                    <td class="py-3 px-1 flex-1">Nico Braun</td>
+                  </tr>
+                  <tr class="hover:bg-blue-100 border-b flex">
+                    <td class="py-3 pl-3 pr-1 w-24 flex">
+                      <input class="mt-1" type="checkbox" name="" id="" />
+                      <div class="ml-auto">
+                        <span
+                          style="padding: 1px 5px;"
+                          class="text-xs font-mono border rounded-md bg-red-600 text-white leading-none"
+                          >O</span
+                        >
+                      </div>
+                    </td>
+                    <td class="py-3 px-1 w-24">#12534</td>
+                    <td class="py-3 px-1 flex-1">My Bike was stolen</td>
+                    <td class="py-3 px-1 flex-1">Jim Beam</td>
+                    <td class="py-3 px-1 flex-1">01/01/1970</td>
+                    <td class="py-3 px-1 flex-1">Team Awesome</td>
+                    <td class="py-3 px-1 flex-1">Nico Braun</td>
+                  </tr>
+                  <tr class="hover:bg-blue-100 border-b flex">
+                    <td class="py-3 pl-3 pr-1 w-24 flex">
+                      <input class="mt-1" type="checkbox" name="" id="" />
+                      <div class="ml-auto">
+                        <span
+                          style="padding: 1px 5px;"
+                          class="text-xs font-mono border rounded-md bg-red-600 text-white leading-none"
+                          >O</span
+                        >
+                      </div>
+                    </td>
+                    <td class="py-3 px-1 w-24">#12534</td>
+                    <td class="py-3 px-1 flex-1">My Bike was stolen</td>
+                    <td class="py-3 px-1 flex-1">Jim Beam</td>
+                    <td class="py-3 px-1 flex-1">01/01/1970</td>
+                    <td class="py-3 px-1 flex-1">Team Awesome</td>
+                    <td class="py-3 px-1 flex-1">Nico Braun</td>
+                  </tr>
+                  <tr class="border-b flex">
+                    <th
+                      class="bg-gray-100 text-xs text-left px-3 py-2 flex-1"
+                      colspan="7"
+                    >
+                      <span class="font-normal mr-1">Priority</span
+                      ><span>High</span>
+                    </th>
+                  </tr>
+                  <tr class="hover:bg-blue-100 border-b flex">
+                    <td class="py-3 pl-3 pr-1 w-24 flex">
+                      <input class="mt-1" type="checkbox" name="" id="" />
+                      <div class="ml-auto">
+                        <span
+                          style="padding: 1px 5px;"
+                          class="text-xs font-mono border rounded-md bg-red-600 text-white leading-none"
+                          >O</span
+                        >
+                      </div>
+                    </td>
+                    <td class="py-3 px-1 w-24">#12534</td>
+                    <td class="py-3 px-1 flex-1">My Bike was stolen</td>
+                    <td class="py-3 px-1 flex-1">Jim Beam</td>
+                    <td class="py-3 px-1 flex-1">01/01/1970</td>
+                    <td class="py-3 px-1 flex-1">Team Awesome</td>
+                    <td class="py-3 px-1 flex-1">Nico Braun</td>
+                  </tr>
+                  <tr class="hover:bg-blue-100 border-b flex">
+                    <td class="py-3 pl-3 pr-1 w-24 flex">
+                      <input class="mt-1" type="checkbox" name="" id="" />
+                      <div class="ml-auto">
+                        <span
+                          style="padding: 1px 5px;"
+                          class="text-xs font-mono border rounded-md bg-red-600 text-white leading-none"
+                          >O</span
+                        >
+                      </div>
+                    </td>
+                    <td class="py-3 px-1 w-24">#12534</td>
+                    <td class="py-3 px-1 flex-1">My Bike was stolen</td>
+                    <td class="py-3 px-1 flex-1">Jim Beam</td>
+                    <td class="py-3 px-1 flex-1">01/01/1970</td>
+                    <td class="py-3 px-1 flex-1">Team Awesome</td>
+                    <td class="py-3 px-1 flex-1">Nico Braun</td>
+                  </tr>
+                  <tr class="hover:bg-blue-100 border-b flex">
+                    <td class="py-3 pl-3 pr-1 w-24 flex">
+                      <input class="mt-1" type="checkbox" name="" id="" />
+                      <div class="ml-auto">
+                        <span
+                          style="padding: 1px 5px;"
+                          class="text-xs font-mono border rounded-md bg-red-600 text-white leading-none"
+                          >O</span
+                        >
+                      </div>
+                    </td>
+                    <td class="py-3 px-1 w-24">#12534</td>
+                    <td class="py-3 px-1 flex-1">My Bike was stolen</td>
+                    <td class="py-3 px-1 flex-1">Jim Beam</td>
+                    <td class="py-3 px-1 flex-1">01/01/1970</td>
+                    <td class="py-3 px-1 flex-1">Team Awesome</td>
+                    <td class="py-3 px-1 flex-1">Nico Braun</td>
+                  </tr>
+                  <tr class="hover:bg-blue-100 border-b flex">
+                    <td class="py-3 pl-3 pr-1 w-24 flex">
+                      <input class="mt-1" type="checkbox" name="" id="" />
+                      <div class="ml-auto">
+                        <span
+                          style="padding: 1px 5px;"
+                          class="text-xs font-mono border rounded-md bg-red-600 text-white leading-none"
+                          >O</span
+                        >
+                      </div>
+                    </td>
+                    <td class="py-3 px-1 w-24">#12534</td>
+                    <td class="py-3 px-1 flex-1">My Bike was stolen</td>
+                    <td class="py-3 px-1 flex-1">Jim Beam</td>
+                    <td class="py-3 px-1 flex-1">01/01/1970</td>
+                    <td class="py-3 px-1 flex-1">Team Awesome</td>
+                    <td class="py-3 px-1 flex-1">Nico Braun</td>
+                  </tr>
+                  <tr class="hover:bg-blue-100 border-b flex">
+                    <td class="py-3 pl-3 pr-1 w-24 flex">
+                      <input class="mt-1" type="checkbox" name="" id="" />
+                      <div class="ml-auto">
+                        <span
+                          style="padding: 1px 5px;"
+                          class="text-xs font-mono border rounded-md bg-red-600 text-white leading-none"
+                          >O</span
+                        >
+                      </div>
+                    </td>
+                    <td class="py-3 px-1 w-24">#12534</td>
+                    <td class="py-3 px-1 flex-1">My Bike was stolen</td>
+                    <td class="py-3 px-1 flex-1">Jim Beam</td>
+                    <td class="py-3 px-1 flex-1">01/01/1970</td>
+                    <td class="py-3 px-1 flex-1">Team Awesome</td>
+                    <td class="py-3 px-1 flex-1">Nico Braun</td>
+                  </tr>
+                  <tr class="hover:bg-blue-100 border-b flex">
+                    <td class="py-3 pl-3 pr-1 w-24 flex">
+                      <input class="mt-1" type="checkbox" name="" id="" />
+                      <div class="ml-auto">
+                        <span
+                          style="padding: 1px 5px;"
+                          class="text-xs font-mono border rounded-md bg-red-600 text-white leading-none"
+                          >O</span
+                        >
+                      </div>
+                    </td>
+                    <td class="py-3 px-1 w-24">#12534</td>
+                    <td class="py-3 px-1 flex-1">My Bike was stolen</td>
+                    <td class="py-3 px-1 flex-1">Jim Beam</td>
+                    <td class="py-3 px-1 flex-1">01/01/1970</td>
+                    <td class="py-3 px-1 flex-1">Team Awesome</td>
+                    <td class="py-3 px-1 flex-1">Nico Braun</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
 
             <!-- main section content footer -->
             <footer class="flex p-3 bg-white border-t hidden">footer</footer>
