@@ -44,107 +44,126 @@
 
   <body class="antialiased h-full text-gray-800">
     <div class="h-full w-full flex">
-      <!-- sidebar -->
+      <!-- section body side nav -->
       <nav
+        aria-label="side bar"
         class="flex-none flex flex-col items-center text-center bg-teal-900 text-gray-400 border-r"
       >
         <div
-          class="h-12 flex items-center w-full border-b border-teal-700 px-4"
+          class="h-12 flex items-center w-full"
         >
           <img class="h-6 w-6 mx-auto" src="assets/leaves.png" />
         </div>
-        <a
-          href="#home"
-          class="h-12 border-b border-teal-900 flex items-center text-white bg-teal-700 w-full"
-        >
-          <span class="mx-auto">
-            <svg
-              class="fill-current h-5 w-5"
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
+        
+        <ul>
+          <li>
+            <a
+              title="Home"
+              href="#home"
+              class="h-12 px-4 flex items-center text-white bg-teal-700 w-full"
             >
-              <path
-                d="M12 6.453l9 8.375v9.172h-6v-6h-6v6h-6v-9.172l9-8.375zm12 5.695l-12-11.148-12 11.133 1.361 1.465 10.639-9.868 10.639 9.883 1.361-1.465z"
-              />
-            </svg>
-          </span>
-        </a>
-        <a
-          id=""
-          href="#views"
-          class="h-12 border-b border-teal-900 flex items-center hover:text-white w-full"
-        >
-          <span class="mx-auto">
-            <svg
-              class="fill-current h-5 w-5"
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
+              <span class="mx-auto">
+                <svg
+                  class="fill-current h-5 w-5"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 6.453l9 8.375v9.172h-6v-6h-6v6h-6v-9.172l9-8.375zm12 5.695l-12-11.148-12 11.133 1.361 1.465 10.639-9.868 10.639 9.883 1.361-1.465z"
+                  />
+                </svg>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a
+              title="Views"
+              href="#views"
+              class="h-12 px-4 flex items-center hover:text-white w-full"
             >
-              <path
-                d="M18.546 3h-13.069l-5.477 8.986v9.014h24v-9.014l-5.454-8.986zm-3.796 12h-5.5l-2.25-3h-4.666l4.266-7h10.82l4.249 7h-4.669l-2.25 3zm-9.75-4l.607-1h12.787l.606 1h-14zm12.18-3l.607 1h-11.573l.607-1h10.359zm-1.214-2l.606 1h-9.144l.607-1h7.931z"
-              />
-            </svg>
-          </span>
-        </a>
-        <a
-          href="#customer-lists"
-          class="h-12 border-b border-teal-900 flex items-center hover:text-white w-full"
-        >
-          <span class="mx-auto">
-            <svg
-              class="fill-current h-5 w-5"
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
+              <span class="mx-auto">
+                <svg
+                  class="fill-current h-5 w-5"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M18.546 3h-13.069l-5.477 8.986v9.014h24v-9.014l-5.454-8.986zm-3.796 12h-5.5l-2.25-3h-4.666l4.266-7h10.82l4.249 7h-4.669l-2.25 3zm-9.75-4l.607-1h12.787l.606 1h-14zm12.18-3l.607 1h-11.573l.607-1h10.359zm-1.214-2l.606 1h-9.144l.607-1h7.931z"
+                  />
+                </svg>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a
+              title="Customer Lists"
+              href="#customer-lists"
+              class="h-12 px-4 flex items-center hover:text-white w-full"
             >
-              <path
-                d="M19 7.001c0 3.865-3.134 7-7 7s-7-3.135-7-7c0-3.867 3.134-7.001 7-7.001s7 3.134 7 7.001zm-1.598 7.18c-1.506 1.137-3.374 1.82-5.402 1.82-2.03 0-3.899-.685-5.407-1.822-4.072 1.793-6.593 7.376-6.593 9.821h24c0-2.423-2.6-8.006-6.598-9.819z"
-              />
-            </svg>
-          </span>
-        </a>
-        <a
-          href="#reporting"
-          class="h-12 border-b border-teal-900 flex items-center hover:text-white w-full"
-        >
-          <span class="mx-auto">
-            <svg
-              class="fill-current h-5 w-5"
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
+              <span class="mx-auto">
+                <svg
+                  class="fill-current h-5 w-5"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M19 7.001c0 3.865-3.134 7-7 7s-7-3.135-7-7c0-3.867 3.134-7.001 7-7.001s7 3.134 7 7.001zm-1.598 7.18c-1.506 1.137-3.374 1.82-5.402 1.82-2.03 0-3.899-.685-5.407-1.822-4.072 1.793-6.593 7.376-6.593 9.821h24c0-2.423-2.6-8.006-6.598-9.819z"
+                  />
+                </svg>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a
+              title="Reporting"
+              href="#reporting"
+              class="h-12 px-4 flex items-center hover:text-white w-full"
             >
-              <path
-                d="M5 19h-4v-4h4v4zm6 0h-4v-8h4v8zm6 0h-4v-13h4v13zm6 0h-4v-19h4v19zm1 2h-24v2h24v-2z"
-              />
-            </svg>
-          </span>
-        </a>
-        <a
-          href="#admin"
-          class="h-12 border-b border-teal-900 flex items-center hover:text-white w-full"
-        >
-          <span class="mx-auto">
-            <svg
-              class="fill-current h-5 w-5"
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
+              <span class="mx-auto">
+                <svg
+                  class="fill-current h-5 w-5"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M5 19h-4v-4h4v4zm6 0h-4v-8h4v8zm6 0h-4v-13h4v13zm6 0h-4v-19h4v19zm1 2h-24v2h24v-2z"
+                  />
+                </svg>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a
+              title="Admin"
+              href="#admin"
+              class="h-12 px-4 flex items-center hover:text-white w-full"
             >
-              <path
-                d="M24 13.616v-3.232c-1.651-.587-2.694-.752-3.219-2.019v-.001c-.527-1.271.1-2.134.847-3.707l-2.285-2.285c-1.561.742-2.433 1.375-3.707.847h-.001c-1.269-.526-1.435-1.576-2.019-3.219h-3.232c-.582 1.635-.749 2.692-2.019 3.219h-.001c-1.271.528-2.132-.098-3.707-.847l-2.285 2.285c.745 1.568 1.375 2.434.847 3.707-.527 1.271-1.584 1.438-3.219 2.02v3.232c1.632.58 2.692.749 3.219 2.019.53 1.282-.114 2.166-.847 3.707l2.285 2.286c1.562-.743 2.434-1.375 3.707-.847h.001c1.27.526 1.436 1.579 2.019 3.219h3.232c.582-1.636.75-2.69 2.027-3.222h.001c1.262-.524 2.12.101 3.698.851l2.285-2.286c-.744-1.563-1.375-2.433-.848-3.706.527-1.271 1.588-1.44 3.221-2.021zm-12 2.384c-2.209 0-4-1.791-4-4s1.791-4 4-4 4 1.791 4 4-1.791 4-4 4z"
-              />
-            </svg>
-          </span>
-        </a>
-        <div class="mt-auto h-12 border-teal-900 flex items-center w-full">
+              <span class="mx-auto">
+                <svg
+                  class="fill-current h-5 w-5"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M24 13.616v-3.232c-1.651-.587-2.694-.752-3.219-2.019v-.001c-.527-1.271.1-2.134.847-3.707l-2.285-2.285c-1.561.742-2.433 1.375-3.707.847h-.001c-1.269-.526-1.435-1.576-2.019-3.219h-3.232c-.582 1.635-.749 2.692-2.019 3.219h-.001c-1.271.528-2.132-.098-3.707-.847l-2.285 2.285c.745 1.568 1.375 2.434.847 3.707-.527 1.271-1.584 1.438-3.219 2.02v3.232c1.632.58 2.692.749 3.219 2.019.53 1.282-.114 2.166-.847 3.707l2.285 2.286c1.562-.743 2.434-1.375 3.707-.847h.001c1.27.526 1.436 1.579 2.019 3.219h3.232c.582-1.636.75-2.69 2.027-3.222h.001c1.262-.524 2.12.101 3.698.851l2.285-2.286c-.744-1.563-1.375-2.433-.848-3.706.527-1.271 1.588-1.44 3.221-2.021zm-12 2.384c-2.209 0-4-1.791-4-4s1.791-4 4-4 4 1.791 4 4-1.791 4-4 4z"
+                  />
+                </svg>
+              </span>
+            </a>
+          </li>
+        </ul>
+
+        <div class="mt-auto h-12 flex items-center w-full">
           <img
             style="filter: invert(85%);"
             class="h-8 w-10 mx-auto"
@@ -154,15 +173,23 @@
       </nav>
 
       <div class="flex-1 flex flex-col">
-        <!-- top nav -->
-        <nav class="flex-none flex justify-between bg-white border-b h-12">
-          <!-- nav left -->
-          <div>
+        <!-- section body top nav -->
+        <nav
+          aria-label="top bar"
+          class="flex-none flex justify-between bg-white h-12"
+        >
+          <!-- top bar left -->
+          <div title="Tabs" aria-label="tabs" role="group">
+            <ul role="tablist"></ul>
             <!-- add button -->
             <span class="group">
               <button
-                class="flex items-center h-full px-3"
+                title="Add"
+                role="combobox"
                 aria-haspopup="listbox"
+                aria-expanded="false"
+                aria-controls="add-menu"
+                class="flex items-center h-full px-3"
               >
                 <span class="group relative">
                   <svg
@@ -179,48 +206,57 @@
               </button>
               <span class="absolute p-1 hidden group-hover:block">
                 <div
-                  tabindex="-1"
+                  id="add-menu"
                   role="listbox"
-                  class="bg-white border rounded-md w-screen max-w-sm w-dropdown-large shadow-lg text-base"
+                  tabindex="-1"
+                  class="bg-white border rounded-md w-screen max-w-sm w-dropdown-large shadow-lg text-base focus:outline-none"
                 >
                   <ul class="outline-none leading-relaxed py-2">
                     <li>
-                      <label
-                        class="block px-4 py-3 border-b text-sm font-semibold"
-                        >New</label
-                      >
+                      <label class="block px-4 py-3 text-sm font-semibold">
+                        New
+                      </label>
                     </li>
+                    <li role="separator"><hr /></li>
                     <li
                       role="option"
-                      class="px-6 py-1 my-1 hover:bg-blue-100 cursor-pointer"
+                      tabindex="0"
+                      class="px-6 py-1 my-1 focus:outline-none focus:bg-blue-100 hover:bg-blue-100 cursor-pointer"
                     >
                       Ticket
                     </li>
                     <li
                       role="option"
-                      class="px-6 py-1 my-1 hover:bg-blue-100 cursor-pointer"
+                      tabindex="0"
+                      class="px-6 py-1 my-1 focus:outline-none focus:bg-blue-100 hover:bg-blue-100 cursor-pointer"
                     >
                       User
                     </li>
                     <li
                       role="option"
-                      class="px-6 py-1 my-1 hover:bg-blue-100 cursor-pointer"
+                      tabindex="0"
+                      class="px-6 py-1 my-1 focus:outline-none focus:bg-blue-100 hover:bg-blue-100 cursor-pointer"
                     >
                       Organization
                     </li>
                     <li
                       role="option"
-                      class="px-6 py-1 my-1 hover:bg-blue-100 cursor-pointer"
+                      tabindex="0"
+                      class="px-6 py-1 my-1 focus:outline-none focus:bg-blue-100 hover:bg-blue-100 cursor-pointer"
                     >
                       Search
                     </li>
                     <li>
-                      <label
-                        class="block px-4 py-3 border-b text-sm font-semibold"
+                      <label class="block px-4 py-3 text-sm font-semibold"
                         >Recently Viewed</label
                       >
                     </li>
-                    <li role="option" class="px-6 py-1 my-1 hover:bg-blue-100">
+                    <li role="separator"><hr /></li>
+                    <li
+                      role="option"
+                      tabindex="0"
+                      class="px-6 py-1 my-1 focus:outline-none focus:bg-blue-100 hover:bg-blue-100 cursor-pointer"
+                    >
                       <div class="flex">
                         <div class="pr-2">
                           <span
@@ -240,7 +276,11 @@
                         </div>
                       </div>
                     </li>
-                    <li role="option" class="px-6 py-1 my-1 hover:bg-blue-100">
+                    <li
+                      role="option"
+                      tabindex="0"
+                      class="px-6 py-1 my-1 focus:outline-none focus:bg-blue-100 hover:bg-blue-100 cursor-pointer"
+                    >
                       <div class="flex">
                         <div class="pr-2">
                           <span
@@ -260,7 +300,11 @@
                         </div>
                       </div>
                     </li>
-                    <li role="option" class="px-6 py-1 my-1 hover:bg-blue-100">
+                    <li
+                      role="option"
+                      tabindex="0"
+                      class="px-6 py-1 my-1 focus:outline-none focus:bg-blue-100 hover:bg-blue-100 cursor-pointer"
+                    >
                       <div class="flex">
                         <div class="pr-2">
                           <span
@@ -280,7 +324,11 @@
                         </div>
                       </div>
                     </li>
-                    <li role="option" class="px-6 py-1 my-1 hover:bg-blue-100">
+                    <li
+                      role="option"
+                      tabindex="0"
+                      class="px-6 py-1 my-1 focus:outline-none focus:bg-blue-100 hover:bg-blue-100 cursor-pointer"
+                    >
                       <div class="flex">
                         <div class="pr-2">
                           <span
@@ -306,10 +354,16 @@
             </span>
           </div>
 
-          <!-- nav right  -->
-          <div class="px-6 flex items-center">
+          <!-- to bar right  -->
+          <div
+            aria-label="top panel menu"
+            role="group"
+            class="px-6 flex items-center"
+          >
             <div class="relative">
               <input
+                title="Search Bar"
+                aria-label="search bar"
                 class="leading-relaxed pr-8 pl-3 py-1 rounded-md cursor-pointer transition-all duration-700 ease-in-out focus:border-black focus:cursor-text w-4 focus:w-56 text-sm placeholder-transparent focus:placeholder-gray-500"
                 type="text"
                 placeholder="Search Chi Desk Support"
@@ -330,8 +384,13 @@
                 </svg>
               </span>
             </div>
+
             <div class="h-8 w-8 ml-3">
               <button
+                title="Notifications"
+                aria-label="notifications"
+                aria-haspopup="true"
+                aria-expanded="false"
                 class="w-full h-full text-white bg-gray-400 rounded-md focus:outline-none focus:shadow-outline"
               >
                 <svg
@@ -349,6 +408,10 @@
             </div>
             <div class="h-8 w-8 ml-3">
               <button
+                title="Products"
+                aria-label="chi desk products"
+                aria-haspopup="true"
+                aria-expanded="false"
                 class="w-full h-full rounded-md focus:outline-none focus:shadow-outline"
               >
                 <svg
@@ -366,6 +429,10 @@
             </div>
             <div class="h-8 w-8 ml-3">
               <button
+                title="Page Menu"
+                aria-label="page menu"
+                aria-haspopup="true"
+                aria-expanded="false"
                 class="h-full w-full rounded-full focus:outline-none focus:shadow-outline"
               >
                 <img
@@ -377,27 +444,25 @@
           </div>
         </nav>
 
-        <!-- page header -->
+        <!-- section body header -->
         <header
-          class="flex-none flex h-12 bg-gray-100 border-b px-3 items-center"
+          aria-label="page caption"
+          class="flex-none flex h-12 bg-gray-100 border-t px-3 items-center"
         >
-          <h1 class="font-semibold">Dashboard</h1>
+          <h1 id="page-caption" class="font-semibold">Dashboard</h1>
         </header>
 
-        <!-- content section -->
-
-        <main class="flex-grow flex min-h-0">
-          <!-- side content -->
+        <!-- main content -->
+        <main aria-labelledby="page-caption" class="flex-grow flex min-h-0 border-t">
+          <!-- section -->
           <section
             role="list"
             aria-busy="false"
-            aria-labelledby="feed-label"
-            class="flex flex-col p-3 w-full max-w-xs flex-none bg-gray-100 border-r min-h-0 overflow-auto"
+            class="flex flex-col p-3 w-full max-w-xs flex-none bg-gray-100 min-h-0 overflow-auto"
           >
-            <h2 id="feed-label" class="font-semibold text-sm mb-2">
+            <h1 class="font-semibold text-sm mb-2">
               Updates to your tickets
-            </h2>
-
+            </h1>
             <article
               role="listitem"
               tabindex="0"
@@ -407,20 +472,19 @@
                 <img class="h-6 w-6 rounded-md" src="assets/avatar.png" />
               </span>
               <div class="flex-1">
-                <p>
-                  Tarun T <span class="font-semibold">commented</span> on "RE:
-                  WPMS issue".
-                </p>
+                <header class="mb-1">
+                  Tarun T <span class="font-semibold">commented</span> on
+                  <h1 class="inline">"RE: WPMS issue".</h1>
+                </header>
                 <p class="leading-tight text-gray-600">
                   Hi Mazhar, Please note this issue comes when user is not
                   closing or logout sy…
                 </p>
-                <p class="text-gray-500 text-xs leading-loose">
+                <footer class="text-gray-500 text-xs leading-loose">
                   Friday 22:16
-                </p>
+                </footer>
               </div>
             </article>
-
             <article
               role="listitem"
               tabindex="0"
@@ -430,20 +494,19 @@
                 <img class="h-6 w-6 rounded-md" src="assets/avatar.png" />
               </span>
               <div class="flex-1">
-                <p>
-                  Tarun T <span class="font-semibold">commented</span> on "RE:
-                  WPMS issue".
-                </p>
+                <header class="mb-1">
+                  Tarun T <span class="font-semibold">commented</span> on
+                  <h1 class="inline">"RE: WPMS issue".</h1>
+                </header>
                 <p class="leading-tight text-gray-600">
                   Hi Mazhar, Please note this issue comes when user is not
                   closing or logout sy…
                 </p>
-                <p class="text-gray-500 text-xs leading-loose">
+                <footer class="text-gray-500 text-xs leading-loose">
                   Friday 22:16
-                </p>
+                </footer>
               </div>
             </article>
-
             <article
               role="listitem"
               tabindex="0"
@@ -453,20 +516,19 @@
                 <img class="h-6 w-6 rounded-md" src="assets/avatar.png" />
               </span>
               <div class="flex-1">
-                <p>
-                  Tarun T <span class="font-semibold">commented</span> on "RE:
-                  WPMS issue".
-                </p>
+                <header class="mb-1">
+                  Tarun T <span class="font-semibold">commented</span> on
+                  <h1 class="inline">"RE: WPMS issue".</h1>
+                </header>
                 <p class="leading-tight text-gray-600">
                   Hi Mazhar, Please note this issue comes when user is not
                   closing or logout sy…
                 </p>
-                <p class="text-gray-500 text-xs leading-loose">
+                <footer class="text-gray-500 text-xs leading-loose">
                   Friday 22:16
-                </p>
+                </footer>
               </div>
             </article>
-
             <article
               role="listitem"
               tabindex="0"
@@ -476,20 +538,19 @@
                 <img class="h-6 w-6 rounded-md" src="assets/avatar.png" />
               </span>
               <div class="flex-1">
-                <p>
-                  Tarun T <span class="font-semibold">commented</span> on "RE:
-                  WPMS issue".
-                </p>
+                <header class="mb-1">
+                  Tarun T <span class="font-semibold">commented</span> on
+                  <h1 class="inline">"RE: WPMS issue".</h1>
+                </header>
                 <p class="leading-tight text-gray-600">
                   Hi Mazhar, Please note this issue comes when user is not
                   closing or logout sy…
                 </p>
-                <p class="text-gray-500 text-xs leading-loose">
+                <footer class="text-gray-500 text-xs leading-loose">
                   Friday 22:16
-                </p>
+                </footer>
               </div>
             </article>
-
             <article
               role="listitem"
               tabindex="0"
@@ -499,20 +560,19 @@
                 <img class="h-6 w-6 rounded-md" src="assets/avatar.png" />
               </span>
               <div class="flex-1">
-                <p>
-                  Tarun T <span class="font-semibold">commented</span> on "RE:
-                  WPMS issue".
-                </p>
+                <header class="mb-1">
+                  Tarun T <span class="font-semibold">commented</span> on
+                  <h1 class="inline">"RE: WPMS issue".</h1>
+                </header>
                 <p class="leading-tight text-gray-600">
                   Hi Mazhar, Please note this issue comes when user is not
                   closing or logout sy…
                 </p>
-                <p class="text-gray-500 text-xs leading-loose">
+                <footer class="text-gray-500 text-xs leading-loose">
                   Friday 22:16
-                </p>
+                </footer>
               </div>
             </article>
-
             <article
               role="listitem"
               tabindex="0"
@@ -522,20 +582,19 @@
                 <img class="h-6 w-6 rounded-md" src="assets/avatar.png" />
               </span>
               <div class="flex-1">
-                <p>
-                  Tarun T <span class="font-semibold">commented</span> on "RE:
-                  WPMS issue".
-                </p>
+                <header class="mb-1">
+                  Tarun T <span class="font-semibold">commented</span> on
+                  <h1 class="inline">"RE: WPMS issue".</h1>
+                </header>
                 <p class="leading-tight text-gray-600">
                   Hi Mazhar, Please note this issue comes when user is not
                   closing or logout sy…
                 </p>
-                <p class="text-gray-500 text-xs leading-loose">
+                <footer class="text-gray-500 text-xs leading-loose">
                   Friday 22:16
-                </p>
+                </footer>
               </div>
             </article>
-
             <article
               role="listitem"
               tabindex="0"
@@ -545,20 +604,19 @@
                 <img class="h-6 w-6 rounded-md" src="assets/avatar.png" />
               </span>
               <div class="flex-1">
-                <p>
-                  Tarun T <span class="font-semibold">commented</span> on "RE:
-                  WPMS issue".
-                </p>
+                <header class="mb-1">
+                  Tarun T <span class="font-semibold">commented</span> on
+                  <h1 class="inline">"RE: WPMS issue".</h1>
+                </header>
                 <p class="leading-tight text-gray-600">
                   Hi Mazhar, Please note this issue comes when user is not
                   closing or logout sy…
                 </p>
-                <p class="text-gray-500 text-xs leading-loose">
+                <footer class="text-gray-500 text-xs leading-loose">
                   Friday 22:16
-                </p>
+                </footer>
               </div>
             </article>
-
             <article
               role="listitem"
               tabindex="0"
@@ -568,20 +626,19 @@
                 <img class="h-6 w-6 rounded-md" src="assets/avatar.png" />
               </span>
               <div class="flex-1">
-                <p>
-                  Tarun T <span class="font-semibold">commented</span> on "RE:
-                  WPMS issue".
-                </p>
+                <header class="mb-1">
+                  Tarun T <span class="font-semibold">commented</span> on
+                  <h1 class="inline">"RE: WPMS issue".</h1>
+                </header>
                 <p class="leading-tight text-gray-600">
                   Hi Mazhar, Please note this issue comes when user is not
                   closing or logout sy…
                 </p>
-                <p class="text-gray-500 text-xs leading-loose">
+                <footer class="text-gray-500 text-xs leading-loose">
                   Friday 22:16
-                </p>
+                </footer>
               </div>
             </article>
-
             <article
               role="listitem"
               tabindex="0"
@@ -591,20 +648,19 @@
                 <img class="h-6 w-6 rounded-md" src="assets/avatar.png" />
               </span>
               <div class="flex-1">
-                <p>
-                  Tarun T <span class="font-semibold">commented</span> on "RE:
-                  WPMS issue".
-                </p>
+                <header class="mb-1">
+                  Tarun T <span class="font-semibold">commented</span> on
+                  <h1 class="inline">"RE: WPMS issue".</h1>
+                </header>
                 <p class="leading-tight text-gray-600">
                   Hi Mazhar, Please note this issue comes when user is not
                   closing or logout sy…
                 </p>
-                <p class="text-gray-500 text-xs leading-loose">
+                <footer class="text-gray-500 text-xs leading-loose">
                   Friday 22:16
-                </p>
+                </footer>
               </div>
             </article>
-
             <article
               role="listitem"
               tabindex="0"
@@ -614,20 +670,19 @@
                 <img class="h-6 w-6 rounded-md" src="assets/avatar.png" />
               </span>
               <div class="flex-1">
-                <p>
-                  Tarun T <span class="font-semibold">commented</span> on "RE:
-                  WPMS issue".
-                </p>
+                <header class="mb-1">
+                  Tarun T <span class="font-semibold">commented</span> on
+                  <h1 class="inline">"RE: WPMS issue".</h1>
+                </header>
                 <p class="leading-tight text-gray-600">
                   Hi Mazhar, Please note this issue comes when user is not
                   closing or logout sy…
                 </p>
-                <p class="text-gray-500 text-xs leading-loose">
+                <footer class="text-gray-500 text-xs leading-loose">
                   Friday 22:16
-                </p>
+                </footer>
               </div>
             </article>
-
             <article
               role="listitem"
               tabindex="0"
@@ -637,20 +692,19 @@
                 <img class="h-6 w-6 rounded-md" src="assets/avatar.png" />
               </span>
               <div class="flex-1">
-                <p>
-                  Tarun T <span class="font-semibold">commented</span> on "RE:
-                  WPMS issue".
-                </p>
+                <header class="mb-1">
+                  Tarun T <span class="font-semibold">commented</span> on
+                  <h1 class="inline">"RE: WPMS issue".</h1>
+                </header>
                 <p class="leading-tight text-gray-600">
                   Hi Mazhar, Please note this issue comes when user is not
                   closing or logout sy…
                 </p>
-                <p class="text-gray-500 text-xs leading-loose">
+                <footer class="text-gray-500 text-xs leading-loose">
                   Friday 22:16
-                </p>
+                </footer>
               </div>
             </article>
-
             <article
               role="listitem"
               tabindex="0"
@@ -660,20 +714,19 @@
                 <img class="h-6 w-6 rounded-md" src="assets/avatar.png" />
               </span>
               <div class="flex-1">
-                <p>
-                  Tarun T <span class="font-semibold">commented</span> on "RE:
-                  WPMS issue".
-                </p>
+                <header class="mb-1">
+                  Tarun T <span class="font-semibold">commented</span> on
+                  <h1 class="inline">"RE: WPMS issue".</h1>
+                </header>
                 <p class="leading-tight text-gray-600">
                   Hi Mazhar, Please note this issue comes when user is not
                   closing or logout sy…
                 </p>
-                <p class="text-gray-500 text-xs leading-loose">
+                <footer class="text-gray-500 text-xs leading-loose">
                   Friday 22:16
-                </p>
+                </footer>
               </div>
             </article>
-
             <article
               role="listitem"
               tabindex="0"
@@ -683,115 +736,164 @@
                 <img class="h-6 w-6 rounded-md" src="assets/avatar.png" />
               </span>
               <div class="flex-1">
-                <p>
-                  Tarun T <span class="font-semibold">commented</span> on "RE:
-                  WPMS issue".
-                </p>
+                <header class="mb-1">
+                  Tarun T <span class="font-semibold">commented</span> on
+                  <h1 class="inline">"RE: WPMS issue".</h1>
+                </header>
                 <p class="leading-tight text-gray-600">
                   Hi Mazhar, Please note this issue comes when user is not
                   closing or logout sy…
                 </p>
-                <p class="text-gray-500 text-xs leading-loose">
+                <footer class="text-gray-500 text-xs leading-loose">
                   Friday 22:16
+                </footer>
+              </div>
+            </article>
+            <article
+              role="listitem"
+              tabindex="0"
+              class="cursor-pointer border rounded-md p-3 bg-white flex text-sm text-gray-700 mb-2 hover:border-green-500 focus:outline-none focus:border-green-500"
+            >
+              <span class="flex-none pt-1 pr-2">
+                <img class="h-6 w-6 rounded-md" src="assets/avatar.png" />
+              </span>
+              <div class="flex-1">
+                <header class="mb-1">
+                  Tarun T <span class="font-semibold">commented</span> on
+                  <h1 class="inline">"RE: WPMS issue".</h1>
+                </header>
+                <p class="leading-tight text-gray-600">
+                  Hi Mazhar, Please note this issue comes when user is not
+                  closing or logout sy…
                 </p>
+                <footer class="text-gray-500 text-xs leading-loose">
+                  Friday 22:16
+                </footer>
               </div>
             </article>
           </section>
 
-          <!-- main content -->
+          <!-- section -->
           <section
-            aria-label="dashboard"
-            class="flex min-h-0 flex-col flex-auto"
+            aria-label="main content"
+            class="flex min-h-0 flex-col flex-auto border-l"
           >
-            <!-- main content nav  -->
-            <nav>
-              <div class="bg-gray-100 border-b flex py-3 px-4">
-                <div class="mr-4">
-                  <label class="text-xs font-semibold block mb-1"
-                    >Open Tickets
-                    <span class="text-xs font-normal text-gray-700"
-                      >(current)</span
-                    >
-                  </label>
-                  <div class="flex">
-                    <div
-                      class="px-2 py-1 rounded-l-md border border-r-0 bg-white flex flex-col items-center w-24 cursor-pointer"
-                    >
-                      <p class="font-semibold">13</p>
-                      <p class="text-xs leading-tight uppercase text-gray-600">
-                        You
-                      </p>
-                    </div>
-                    <div
-                      class="px-2 py-1 border rounded-r-md bg-white flex flex-col items-center w-24 cursor-pointer"
-                    >
-                      <p class="font-semibold">29</p>
-                      <p class="text-xs leading-tight uppercase text-gray-600">
-                        Groups
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div>
-                  <label class="text-xs font-semibold block mb-1"
-                    >Ticket Statistics
-                    <span class="text-xs font-normal text-gray-700"
-                      >(this week)</span
-                    ></label
+            <!-- section -->
+            <nav class="bg-gray-100 flex py-3 px-4">
+              <div
+                role="tablist"
+                tabindex="0"
+                aria-labelledby="open-tickets-tabs-label"
+                class="mr-4 focus:outline-none"
+              >
+                <label
+                  id="open-tickets-tabs-label"
+                  class="text-xs font-semibold block mb-1"
+                  >Open Tickets
+                  <span class="text-xs font-normal text-gray-700"
+                    >(current)</span
                   >
-                  <div class="flex">
-                    <div
-                      class="px-2 py-1 rounded-l-md border border-r-0 bg-white flex flex-col items-center w-24 cursor-pointer"
-                    >
-                      <p class="font-semibold">16</p>
-                      <p class="text-xs leading-tight uppercase text-gray-600">
-                        good
-                      </p>
-                    </div>
-                    <div
-                      class="px-2 py-1 border border-r-0 bg-white flex flex-col items-center w-24 cursor-pointer"
-                    >
-                      <p class="font-semibold">2</p>
-                      <p class="text-xs leading-tight uppercase text-gray-600">
-                        bad
-                      </p>
-                    </div>
-                    <div
-                      class="px-2 py-1 border rounded-r-md bg-white flex flex-col items-center w-24 cursor-pointer"
-                    >
-                      <p class="font-semibold">32</p>
-                      <p class="text-xs leading-tight uppercase text-gray-600">
-                        solved
-                      </p>
-                    </div>
+                </label>
+                <div class="flex">
+                  <button
+                    role="tab"
+                    tabindex="0"
+                    class="focus:outline-none px-2 py-1 rounded-l-md border border-r-0 bg-white flex flex-col items-center w-24 cursor-pointer"
+                  >
+                    <p class="font-semibold">13</p>
+                    <p class="text-xs leading-tight uppercase text-gray-600">
+                      You
+                    </p>
+                  </button>
+                  <button
+                    role="tab"
+                    tabindex="0"
+                    class="focus:outline-none px-2 py-1 border rounded-r-md bg-white flex flex-col items-center w-24 cursor-pointer"
+                  >
+                    <p class="font-semibold">29</p>
+                    <p class="text-xs leading-tight uppercase text-gray-600">
+                      Groups
+                    </p>
+                  </button>
+                </div>
+              </div>
+              <div
+                role="tablist"
+                tabindex="0"
+                aria-labelledby="ticket-statistics-tabs-label"
+                class="focus:outline-none"
+              >
+                <label
+                  id="ticket-statistics-tabs-label"
+                  class="text-xs font-semibold block mb-1"
+                  >Ticket Statistics
+                  <span class="text-xs font-normal text-gray-700"
+                    >(this week)</span
+                  ></label
+                >
+                <div class="flex">
+                  <div
+                    role="tab"
+                    tabindex="0"
+                    class="focus:outline-none px-2 py-1 rounded-l-md border border-r-0 bg-white flex flex-col items-center w-24 cursor-pointer"
+                  >
+                    <p class="font-semibold">16</p>
+                    <p class="text-xs leading-tight uppercase text-gray-600">
+                      good
+                    </p>
+                  </div>
+                  <div
+                    role="tab"
+                    tabindex="0"
+                    class="focus:outline-none px-2 py-1 border border-r-0 bg-white flex flex-col items-center w-24 cursor-pointer"
+                  >
+                    <p class="font-semibold">2</p>
+                    <p class="text-xs leading-tight uppercase text-gray-600">
+                      bad
+                    </p>
+                  </div>
+                  <div
+                    role="tab"
+                    tabindex="0"
+                    class="focus:outline-none px-2 py-1 border rounded-r-md bg-white flex flex-col items-center w-24 cursor-pointer"
+                  >
+                    <p class="font-semibold">32</p>
+                    <p class="text-xs leading-tight uppercase text-gray-600">
+                      solved
+                    </p>
                   </div>
                 </div>
               </div>
             </nav>
-            <!-- main content header -->
-            <header class="bg-white border-b flex items-center py-1 px-4">
+
+            <!-- content caption -->
+            <header class="bg-white border-t flex items-center py-1 px-4">
               <div class="flex">
-                <h2 class="font-semibold text-sm">
+                <h2 id="content-caption" class="font-semibold text-sm">
                   Tickets requiring your attention (13)
                 </h2>
                 <span class="ml-3 group relative">
                   <button
+                    aria-haspopup="tooltip"
+                    aria-controls="info-popup"
                     class="text-xs text-blue-700 border-b border-dotted border-blue-700 cursor-pointer focus:outline-none"
                   >
                     What is this?
                   </button>
                   <div
+                    role="tooltip"
+                    id="info-popup"
                     class="absolute pt-1 right-0 transform translate-x-40 mx-auto hidden group-hover:block"
                   >
                     <div
                       class="border rounded-md rounded-t-lg shadow-lg bg-white w-full max-w-sm w-screen text-sm"
                     >
                       <header
-                        class="font-semibold rounded-t-lg bg-gray-300 p-3 border-b"
+                        class="font-semibold rounded-t-lg bg-gray-300 p-3"
                       >
                         People are waiting for replies!
                       </header>
-                      <div class="p-3">
+                      <div class="p-3 border-t">
                         <p class="mb-3">
                           These are new or open tickets that are assigned to
                           you, unassinged in your group(s) or not assigned to
@@ -807,68 +909,51 @@
                 </span>
               </div>
               <div class="ml-auto">
-                <button class="border rounded-md px-3 py-1 text-sm">
+                <button
+                  aria-label="play"
+                  class="border rounded-md px-3 py-1 text-sm"
+                >
                   Play
                 </button>
               </div>
             </header>
 
-            <!-- main  content overflow section 
+            <!-- content overflow section 
                 remove table and thead but keep tbody and change tbody to section, in order
                 to have scrollable overflow container -->
             <table
-              role="table"
+              aria-describedby="info-popup"
               aria-label="open tickets"
-              class="w-full min-h-0 flex flex-col"
+              class="border-t w-full min-h-0 flex flex-col"
             >
-              <thead role="rowgroup" class="flex w-full flex-col px-4 pr-8">
-                <tr role="row" class="border-b flex">
+              <thead class="flex w-full flex-col px-4 pr-8">
+                <tr class="border-b flex">
                   <th
-                    role="columnheader"
                     class="font-semibold text-sm text-left py-3 pl-3 pr-1 w-24"
                   >
                     <input type="checkbox" name="" id="" />
                   </th>
-                  <th
-                    role="columnheader"
-                    class="font-semibold text-sm text-left py-3 px-1 w-24"
-                  >
+                  <th class="font-semibold text-sm text-left py-3 px-1 w-24">
                     ID
                   </th>
-                  <th
-                    role="columnheader"
-                    class="font-semibold text-sm text-left py-3 px-1 flex-1"
-                  >
+                  <th class="font-semibold text-sm text-left py-3 px-1 flex-1">
                     Subject
                   </th>
-                  <th
-                    role="columnheader"
-                    class="font-semibold text-sm text-left py-3 px-1 flex-1"
-                  >
+                  <th class="font-semibold text-sm text-left py-3 px-1 flex-1">
                     Requester
                   </th>
-                  <th
-                    role="columnheader"
-                    class="font-semibold text-sm text-left py-3 px-1 flex-1"
-                  >
+                  <th class="font-semibold text-sm text-left py-3 px-1 flex-1">
                     Requester updated
                   </th>
-                  <th
-                    role="columnheader"
-                    class="font-semibold text-sm text-left py-3 px-1 flex-1"
-                  >
+                  <th class="font-semibold text-sm text-left py-3 px-1 flex-1">
                     Group
                   </th>
-                  <th
-                    role="columnheader"
-                    class="font-semibold text-sm text-left py-3 px-1 flex-1"
-                  >
+                  <th class="font-semibold text-sm text-left py-3 px-1 flex-1">
                     Assignee
                   </th>
                 </tr>
               </thead>
               <tbody
-                role="rowgroup"
                 class="flex w-full flex-col flex-1 min-h-0 overflow-auto px-4"
               >
                 <tr class="border-b flex">
@@ -876,8 +961,10 @@
                     class="bg-gray-100 text-xs text-left px-3 py-2 flex-1"
                     colspan="7"
                   >
-                    <span class="font-normal mr-1">Priority</span
-                    ><span>Low</span>
+                    <h3>
+                      <span class="font-normal mr-1">Priority</span
+                      ><span>Low</span>
+                    </h3>
                   </th>
                 </tr>
                 <tr role="row" class="hover:bg-blue-100 border-b flex">
@@ -955,8 +1042,10 @@
                     class="bg-gray-100 text-xs text-left px-3 py-2 flex-1"
                     colspan="7"
                   >
-                    <span class="font-normal mr-1">Priority</span
-                    ><span>Medium</span>
+                    <h3>
+                      <span class="font-normal mr-1">Priority</span>
+                      <span>Medium</span>
+                    </h3>
                   </th>
                 </tr>
                 <tr class="hover:bg-blue-100 border-b flex">
@@ -1020,7 +1109,8 @@
                       <span
                         style="padding: 1px 5px;"
                         class="text-xs font-mono border rounded-md bg-red-600 text-white leading-none"
-                        >O</span
+                      >
+                        O</span
                       >
                     </div>
                   </td>
@@ -1036,8 +1126,10 @@
                     class="bg-gray-100 text-xs text-left px-3 py-2 flex-1"
                     colspan="7"
                   >
-                    <span class="font-normal mr-1">Priority</span
-                    ><span>High</span>
+                    <h3>
+                      <span class="font-normal mr-1">Priority</span>
+                      <span>High</span>
+                    </h3>
                   </th>
                 </tr>
                 <tr class="hover:bg-blue-100 border-b flex">
@@ -1047,7 +1139,8 @@
                       <span
                         style="padding: 1px 5px;"
                         class="text-xs font-mono border rounded-md bg-red-600 text-white leading-none"
-                        >O</span
+                      >
+                        O</span
                       >
                     </div>
                   </td>
@@ -1151,8 +1244,13 @@
               </tbody>
             </table>
 
-            <!-- main content footer, currently hidden -->
-            <footer class="flex p-3 bg-white border-t hidden">footer</footer>
+            <!-- content footer, currently hidden -->
+            <footer
+              aria-label="content footer"
+              class="flex p-3 bg-white border-t hidden"
+            >
+              footer
+            </footer>
           </section>
         </main>
       </div>
