@@ -178,11 +178,10 @@
           class="flex-none flex justify-between bg-white h-12"
         >
           <!-- top bar left -->
-          <div aria-label="tabs" role="group">
-            <ul role="tablist"></ul>
+          <ul aria-label="top bar left" aria-orientation="horizontal" class="flex">
             <!-- add button -->
-            <span id="add" title="Add" aria-expanded="false" aria-haspopup="listbox" class="group relative">
-                <button aria-controls="add" class="flex items-center h-full px-3">  
+            <li class="group relative">
+                <button aria-controls="add" aria-expanded="false" aria-haspopup="listbox" class="flex items-center h-full px-3">  
               <i>
                   <svg
                     class="fill-current h-2 w-2"
@@ -198,6 +197,7 @@
               </button>
               <span class="absolute p-1 hidden group-hover:block">
                 <ul
+                id="add"
                   role="listbox"
                   class="outline-none leading-relaxed py-2 bg-white border rounded-md w-screen max-w-sm w-dropdown-large shadow-lg text-base focus:outline-none"
                 >
@@ -362,28 +362,25 @@
                   </li>
                 </ul>
               </span>
-            </span>
-
-
-
-
-          </div>
+            </li>
+          </ul>
 
           <!-- to bar right  -->
-          <div
-            aria-label="top panel menu"
-            role="group"
+          <ul
+            aria-label="top bar right"
+            aria-orientation="horizontal"
             class="px-6 flex items-center"
           >
-            <div class="relative">
+            <li class="relative">
               <input
                 title="Search Bar"
                 aria-label="search bar"
+                role="search"
                 class="leading-relaxed pr-8 pl-3 py-1 rounded-md cursor-pointer transition-all duration-700 ease-in-out focus:border-black focus:cursor-text w-4 focus:w-56 text-sm placeholder-transparent focus:placeholder-gray-500"
                 type="text"
                 placeholder="Search Chi Desk Support"
               />
-              <span
+              <i
                 class="pointer-events-none absolute top-0 right-0 h-full flex items-center pr-3"
               >
                 <svg
@@ -397,17 +394,16 @@
                     d="M21.172 24l-7.387-7.387c-1.388.874-3.024 1.387-4.785 1.387-4.971 0-9-4.029-9-9s4.029-9 9-9 9 4.029 9 9c0 1.761-.514 3.398-1.387 4.785l7.387 7.387-2.828 2.828zm-12.172-8c3.859 0 7-3.14 7-7s-3.141-7-7-7-7 3.14-7 7 3.141 7 7 7z"
                   />
                 </svg>
-              </span>
-            </div>
+              </i>
+            </li>
 
-            <div class="h-8 w-8 ml-3">
+            <li class="h-8 w-8 ml-3">
               <button
                 title="Notifications"
                 aria-label="notifications"
-                aria-haspopup="true"
-                aria-expanded="false"
                 class="w-full h-full text-white bg-gray-400 rounded-md focus:outline-none focus:shadow-outline"
               >
+              <i>
                 <svg
                   class="fill-current w-4 h-4 mx-auto"
                   xmlns="http://www.w3.org/2000/svg"
@@ -419,16 +415,17 @@
                     d="M15.137 3.945c-.644-.374-1.042-1.07-1.041-1.82v-.003c.001-1.172-.938-2.122-2.096-2.122s-2.097.95-2.097 2.122v.003c.001.751-.396 1.446-1.041 1.82-4.667 2.712-1.985 11.715-6.862 13.306v1.749h20v-1.749c-4.877-1.591-2.195-10.594-6.863-13.306zm-3.137-2.945c.552 0 1 .449 1 1 0 .552-.448 1-1 1s-1-.448-1-1c0-.551.448-1 1-1zm3 20c0 1.598-1.392 3-2.971 3s-3.029-1.402-3.029-3h6z"
                   />
                 </svg>
+              </i>
               </button>
-            </div>
-            <div class="h-8 w-8 ml-3">
+            </li>
+
+            <li class="h-8 w-8 ml-3">
               <button
                 title="Products"
                 aria-label="chi desk products"
-                aria-haspopup="true"
-                aria-expanded="false"
                 class="w-full h-full rounded-md focus:outline-none focus:shadow-outline"
               >
+              <i>
                 <svg
                   class="fill-current w-4 h-4 mx-auto"
                   xmlns="http://www.w3.org/2000/svg"
@@ -440,14 +437,14 @@
                     d="M1 1v5h5V1H1zm5 8a1 1 0 011 1v5a1 1 0 01-1 1H1a1 1 0 01-1-1v-5a1 1 0 011-1h5zm9 0a1 1 0 011 1v5a1 1 0 01-1 1h-5a1 1 0 01-1-1v-5a1 1 0 011-1h5zm-9 1H1v5h5v-5zm9 0h-5v5h5v-5zM6 0a1 1 0 011 1v5a1 1 0 01-1 1H1a1 1 0 01-1-1V1a1 1 0 011-1h5zm9 0a1 1 0 011 1v5a1 1 0 01-1 1h-5a1 1 0 01-1-1V1a1 1 0 011-1h5zm0 1h-5v5h5V1z"
                   ></path>
                 </svg>
+              </i>
               </button>
-            </div>
-            <div class="h-8 w-8 ml-3">
+            </li>
+            
+            <li class="h-8 w-8 ml-3">
               <button
                 title="Page Menu"
                 aria-label="page menu"
-                aria-haspopup="true"
-                aria-expanded="false"
                 class="h-full w-full rounded-full focus:outline-none focus:shadow-outline"
               >
                 <img
@@ -455,8 +452,9 @@
                   src="assets/avatar.png"
                 />
               </button>
-            </div>
-          </div>
+            </li>
+
+          </ul>
         </nav>
 
         <!-- section body header -->
