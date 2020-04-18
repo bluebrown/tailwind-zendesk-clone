@@ -12,6 +12,8 @@
       line-height: 1.285;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Arial, sans-serif;
     }
+
+    /* can be configured in tailwind.config.js */
     .group:hover .group-hover\:block {
       display: block;
     }
@@ -20,9 +22,22 @@
       cursor: text;
     }
 
-    .focus\:w-56:focus {
-      width: 14rem;
-      line-height: ;
+    .focus\:w-64:focus {
+      width: 16rem;
+    }
+
+    /* zendesk styles */
+    .h-16 { 
+      height: 50px;
+    }
+    .bg-teal-900 {
+      background: #03363D;
+    }
+    .bg-gray-100 {
+      background: #F8F9F9;
+    }
+    .hover\:border-green-500:hover {
+      border-color: #78a300;
     }
   </style>
 </head>
@@ -32,13 +47,13 @@
     <!-- section body side nav -->
     <nav aria-label="side bar" aria-orientation="vertical"
       class="flex-none flex flex-col items-center text-center bg-teal-900 text-gray-400 border-r">
-      <div class="h-12 flex items-center w-full">
+      <div class="h-16 flex items-center w-full">
         <img class="h-6 w-6 mx-auto" src="assets/leaves.png" />
       </div>
 
       <ul>
         <li>
-          <a title="Home" href="#home" class="h-12 px-5 flex items-center text-white bg-teal-700 w-full">
+          <a title="Home" href="#home" class="h-16 px-6 flex items-center text-white bg-teal-700 w-full">
             <i class="mx-auto">
               <svg class="fill-current h-5 w-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                 viewBox="0 0 24 24">
@@ -49,7 +64,7 @@
           </a>
         </li>
         <li>
-          <a title="Views" href="#views" class="h-12 px-5 flex items-center hover:text-white w-full">
+          <a title="Views" href="#views" class="h-16 px-6 flex items-center hover:text-white w-full">
             <i class="mx-auto">
               <svg class="fill-current h-5 w-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                 viewBox="0 0 24 24">
@@ -60,7 +75,7 @@
           </a>
         </li>
         <li>
-          <a title="Customer Lists" href="#customer-lists" class="h-12 px-5 flex items-center hover:text-white w-full">
+          <a title="Customer Lists" href="#customer-lists" class="h-16 px-6 flex items-center hover:text-white w-full">
             <i class="mx-auto">
               <svg class="fill-current h-5 w-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                 viewBox="0 0 24 24">
@@ -71,7 +86,7 @@
           </a>
         </li>
         <li>
-          <a title="Reporting" href="#reporting" class="h-12 px-5 flex items-center hover:text-white w-full">
+          <a title="Reporting" href="#reporting" class="h-16 px-6 flex items-center hover:text-white w-full">
             <i class="mx-auto">
               <svg class="fill-current h-5 w-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                 viewBox="0 0 24 24">
@@ -81,7 +96,7 @@
           </a>
         </li>
         <li>
-          <a title="Admin" href="#admin" class="h-12 px-5 flex items-center hover:text-white w-full">
+          <a title="Admin" href="#admin" class="h-16 px-6 flex items-center hover:text-white w-full">
             <i class="mx-auto">
               <svg class="fill-current h-5 w-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                 viewBox="0 0 24 24">
@@ -93,33 +108,33 @@
         </li>
       </ul>
 
-      <div class="mt-auto h-12 flex items-center w-full">
+      <div class="mt-auto h-16 flex items-center w-full">
         <img style="filter: invert(85%);" class="h-8 w-10 mx-auto" src="assets/chi.png" />
       </div>
     </nav>
 
     <div class="flex-1 flex flex-col">
       <!-- section body top nav -->
-      <nav aria-label="top bar" class="flex-none flex justify-between bg-white h-12">
+      <nav aria-label="top bar" class="flex-none flex justify-between bg-white h-16">
         <!-- top bar left -->
         <ul aria-label="top bar left" aria-orientation="horizontal" class="flex">
           <!-- add button -->
           <li class="group relative">
             <button aria-controls="add" aria-expanded="false" aria-haspopup="listbox"
-              class="flex items-center h-full px-3 text-sm">
+              class="flex items-center h-full px-4 text-sm">
               <i>
-                <svg class="fill-current h-2 w-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                <svg class="fill-current w-3 h-3 mx-auto" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                   viewBox="0 0 24 24">
-                  <path d="M24 10h-10v-10h-4v10h-10v4h10v10h4v-10h10z" />
+                  <path d="M24 10h-10v-10h-2v10h-10v2h10v10h2v-10h10z"/>
                 </svg>
               </i>
               <span class="ml-2">Add</span>
             </button>
             <span class="absolute p-1 hidden group-hover:block">
               <ul id="add" role="listbox"
-                class="outline-none  py-2 bg-white border rounded-md w-screen max-w-sm w-dropdown-large shadow-lg  focus:outline-none">
+                class="outline-none  py-2 bg-white border rounded-md w-screen max-w-md w-dropdown-large shadow-lg  focus:outline-none">
                 <li role="separator">
-                  <label class="block px-4 py-3  font-semibold">
+                  <label class="block px-4 py-3 font-semibold">
                     New
                   </label>
                   <hr />
@@ -166,7 +181,7 @@
                   <div class="flex">
                     <div class="pr-2">
                       <span style="padding: 2px 5px; font-size: 0.7rem;"
-                        class="font-mono rounded-sm bg-yellow-600 text-black leading-none">N</span>
+                        class="font-mono rounded-sm bg-yellow-400 text-black leading-none">N</span>
                     </div>
                     <div class="flex-1">
                       <p>Vertias - ams opps issue</p>
@@ -237,13 +252,13 @@
         </ul>
 
         <!-- to bar right  -->
-        <ul aria-label="top bar right" aria-orientation="horizontal" class="px-6 flex items-center">
+        <ul aria-label="top bar right" aria-orientation="horizontal" class="px-8 flex items-center">
           <li class="relative">
             <input title="Search Bar" aria-label="search bar" role="search"
-              class=" pr-8 pl-3 py-1 rounded-md cursor-pointer transition-all duration-700 ease-in-out focus:border-black focus:cursor-text w-4 focus:w-56  placeholder-transparent focus:placeholder-gray-500"
+              class=" pr-8 pl-4 py-2 rounded-md cursor-pointer transition-all duration-300 ease-in-out focus:border-black focus:cursor-text w-4 focus:w-64  placeholder-transparent focus:placeholder-gray-500"
               type="text" placeholder="Search Chi Desk Support" />
             <i class="pointer-events-none absolute top-0 right-0 h-full flex items-center pr-3">
-              <svg class="fill-current w-3 h-3 mx-auto" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+              <svg class="fill-current w-4 h-4 mx-auto" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                 viewBox="0 0 24 24">
                 <path
                   d="M21.172 24l-7.387-7.387c-1.388.874-3.024 1.387-4.785 1.387-4.971 0-9-4.029-9-9s4.029-9 9-9 9 4.029 9 9c0 1.761-.514 3.398-1.387 4.785l7.387 7.387-2.828 2.828zm-12.172-8c3.859 0 7-3.14 7-7s-3.141-7-7-7-7 3.14-7 7 3.141 7 7 7z" />
@@ -253,7 +268,7 @@
 
           <li class="h-8 w-8 ml-3">
             <button title="Notifications" aria-label="notifications"
-              class="w-full h-full text-white bg-gray-500 rounded-md focus:outline-none focus:shadow-outline">
+              class="w-full h-full text-white bg-gray-600 rounded-md focus:outline-none focus:shadow-outline">
               <i>
                 <svg class="fill-current w-4 h-4 mx-auto" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                   viewBox="0 0 24 24">
@@ -265,14 +280,23 @@
           </li>
 
           <li class="h-8 w-8 ml-3">
-            <button title="Products" aria-label="chi desk products"
-              class="w-full h-full rounded-md focus:outline-none focus:shadow-outline">
+            <button title="v2 REPL" aria-label="repl"
+              class="w-full h-full text-white bg-gray-600 rounded-md focus:outline-none focus:shadow-outline">
               <i>
                 <svg class="fill-current w-4 h-4 mx-auto" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                  viewBox="0 0 16 16">
-                  <path
-                    d="M1 1v5h5V1H1zm5 8a1 1 0 011 1v5a1 1 0 01-1 1H1a1 1 0 01-1-1v-5a1 1 0 011-1h5zm9 0a1 1 0 011 1v5a1 1 0 01-1 1h-5a1 1 0 01-1-1v-5a1 1 0 011-1h5zm-9 1H1v5h5v-5zm9 0h-5v5h5v-5zM6 0a1 1 0 011 1v5a1 1 0 01-1 1H1a1 1 0 01-1-1V1a1 1 0 011-1h5zm9 0a1 1 0 011 1v5a1 1 0 01-1 1h-5a1 1 0 01-1-1V1a1 1 0 011-1h5zm0 1h-5v5h5V1z">
-                  </path>
+                  viewBox="0 0 24 24">
+                  <path d="M22 6v16h-20v-16h20zm2-6h-24v24h24v-24zm-11 11v1.649l3.229 1.351-3.229 1.347v1.653l5-2.201v-1.599l-5-2.2zm-7 2.201v1.599l5 2.2v-1.653l-3.229-1.347 3.229-1.351v-1.649l-5 2.201z"/>
+                </svg>
+              </i>
+            </button>
+          </li>
+
+          <li class="h-8 w-8 ml-3">
+            <button title="Products" aria-label="chi desk products"
+              class="w-full h-full rounded-md focus:outline-none focus:shadow-outline">
+              <i class="text-gray-600">
+                <svg class="fill-current w-5 h-5 mx-auto" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                  <path d="M11 11h-11v-11h11v11zm13 0h-11v-11h11v11zm-13 13h-11v-11h11v11zm13 0h-11v-11h11v11z"/>
                 </svg>
               </i>
             </button>
@@ -281,14 +305,14 @@
           <li class="h-8 w-8 ml-3">
             <button title="Page Menu" aria-label="page menu"
               class="h-full w-full rounded-full focus:outline-none focus:shadow-outline">
-              <img class="h-8 w-8 rounded-full mx-auto" src="assets/avatar.png" />
+              <img class="h-full w-full rounded-full mx-auto" src="assets/avatar.png" />
             </button>
           </li>
         </ul>
       </nav>
 
       <!-- section body header -->
-      <header aria-label="page caption" class="flex-none flex h-12 bg-gray-100 border-t px-4 items-center">
+      <header aria-label="page caption" class="flex-none flex h-16 bg-gray-100 border-t px-4 items-center">
         <h1 id="page-caption" class="font-semibold text-lg">Dashboard</h1>
       </header>
 
@@ -304,7 +328,7 @@
               <article tabindex="0"
                 class="cursor-pointer border rounded-md p-3 bg-white flex  text-gray-700 mb-2 hover:border-green-500 focus:outline-none focus:border-green-500">
                 <span class="flex-none pt-1 pr-2">
-                  <img class="h-6 w-6 rounded-md" src="assets/avatar.png" />
+                  <img class="h-8 w-8 rounded-md" src="assets/avatar.png" />
                 </span>
                 <div class="flex-1">
                   <header class="mb-1">
@@ -325,7 +349,7 @@
               <article tabindex="0"
                 class="cursor-pointer border rounded-md p-3 bg-white flex  text-gray-700 mb-2 hover:border-green-500 focus:outline-none focus:border-green-500">
                 <span class="flex-none pt-1 pr-2">
-                  <img class="h-6 w-6 rounded-md" src="assets/avatar.png" />
+                  <img class="h-8 w-8 rounded-md" src="assets/avatar.png" />
                 </span>
                 <div class="flex-1">
                   <header class="mb-1">
@@ -346,7 +370,7 @@
               <article tabindex="0"
                 class="cursor-pointer border rounded-md p-3 bg-white flex  text-gray-700 mb-2 hover:border-green-500 focus:outline-none focus:border-green-500">
                 <span class="flex-none pt-1 pr-2">
-                  <img class="h-6 w-6 rounded-md" src="assets/avatar.png" />
+                  <img class="h-8 w-8 rounded-md" src="assets/avatar.png" />
                 </span>
                 <div class="flex-1">
                   <header class="mb-1">
@@ -367,7 +391,7 @@
               <article tabindex="0"
                 class="cursor-pointer border rounded-md p-3 bg-white flex  text-gray-700 mb-2 hover:border-green-500 focus:outline-none focus:border-green-500">
                 <span class="flex-none pt-1 pr-2">
-                  <img class="h-6 w-6 rounded-md" src="assets/avatar.png" />
+                  <img class="h-8 w-8 rounded-md" src="assets/avatar.png" />
                 </span>
                 <div class="flex-1">
                   <header class="mb-1">
@@ -388,7 +412,7 @@
               <article tabindex="0"
                 class="cursor-pointer border rounded-md p-3 bg-white flex  text-gray-700 mb-2 hover:border-green-500 focus:outline-none focus:border-green-500">
                 <span class="flex-none pt-1 pr-2">
-                  <img class="h-6 w-6 rounded-md" src="assets/avatar.png" />
+                  <img class="h-8 w-8 rounded-md" src="assets/avatar.png" />
                 </span>
                 <div class="flex-1">
                   <header class="mb-1">
@@ -409,7 +433,7 @@
               <article tabindex="0"
                 class="cursor-pointer border rounded-md p-3 bg-white flex  text-gray-700 mb-2 hover:border-green-500 focus:outline-none focus:border-green-500">
                 <span class="flex-none pt-1 pr-2">
-                  <img class="h-6 w-6 rounded-md" src="assets/avatar.png" />
+                  <img class="h-8 w-8 rounded-md" src="assets/avatar.png" />
                 </span>
                 <div class="flex-1">
                   <header class="mb-1">
@@ -430,7 +454,7 @@
               <article tabindex="0"
                 class="cursor-pointer border rounded-md p-3 bg-white flex  text-gray-700 mb-2 hover:border-green-500 focus:outline-none focus:border-green-500">
                 <span class="flex-none pt-1 pr-2">
-                  <img class="h-6 w-6 rounded-md" src="assets/avatar.png" />
+                  <img class="h-8 w-8 rounded-md" src="assets/avatar.png" />
                 </span>
                 <div class="flex-1">
                   <header class="mb-1">
@@ -451,7 +475,7 @@
               <article tabindex="0"
                 class="cursor-pointer border rounded-md p-3 bg-white flex  text-gray-700 mb-2 hover:border-green-500 focus:outline-none focus:border-green-500">
                 <span class="flex-none pt-1 pr-2">
-                  <img class="h-6 w-6 rounded-md" src="assets/avatar.png" />
+                  <img class="h-8 w-8 rounded-md" src="assets/avatar.png" />
                 </span>
                 <div class="flex-1">
                   <header class="mb-1">
@@ -472,7 +496,7 @@
               <article tabindex="0"
                 class="cursor-pointer border rounded-md p-3 bg-white flex  text-gray-700 mb-2 hover:border-green-500 focus:outline-none focus:border-green-500">
                 <span class="flex-none pt-1 pr-2">
-                  <img class="h-6 w-6 rounded-md" src="assets/avatar.png" />
+                  <img class="h-8 w-8 rounded-md" src="assets/avatar.png" />
                 </span>
                 <div class="flex-1">
                   <header class="mb-1">
@@ -493,7 +517,7 @@
               <article tabindex="0"
                 class="cursor-pointer border rounded-md p-3 bg-white flex  text-gray-700 mb-2 hover:border-green-500 focus:outline-none focus:border-green-500">
                 <span class="flex-none pt-1 pr-2">
-                  <img class="h-6 w-6 rounded-md" src="assets/avatar.png" />
+                  <img class="h-8 w-8 rounded-md" src="assets/avatar.png" />
                 </span>
                 <div class="flex-1">
                   <header class="mb-1">
@@ -514,7 +538,7 @@
               <article tabindex="0"
                 class="cursor-pointer border rounded-md p-3 bg-white flex  text-gray-700 mb-2 hover:border-green-500 focus:outline-none focus:border-green-500">
                 <span class="flex-none pt-1 pr-2">
-                  <img class="h-6 w-6 rounded-md" src="assets/avatar.png" />
+                  <img class="h-8 w-8 rounded-md" src="assets/avatar.png" />
                 </span>
                 <div class="flex-1">
                   <header class="mb-1">
@@ -535,7 +559,7 @@
               <article tabindex="0"
                 class="cursor-pointer border rounded-md p-3 bg-white flex  text-gray-700 mb-2 hover:border-green-500 focus:outline-none focus:border-green-500">
                 <span class="flex-none pt-1 pr-2">
-                  <img class="h-6 w-6 rounded-md" src="assets/avatar.png" />
+                  <img class="h-8 w-8 rounded-md" src="assets/avatar.png" />
                 </span>
                 <div class="flex-1">
                   <header class="mb-1">
@@ -634,13 +658,14 @@
                   What is this?
                 </button>
                 <div role="tooltip" id="info-popup"
-                  class="absolute pt-1 right-0 transform translate-x-40 mx-auto hidden group-hover:block z-50">
-                  <div class="border rounded-md rounded-t-lg shadow-lg bg-white w-full max-w-sm w-screen ">
-                    <header class="font-semibold rounded-t-lg bg-gray-300 p-3">
+                  class="absolute pt-1 rounded-md rounded-t-lg right-0 transform translate-x-40 mx-auto hidden group-hover:block z-50">
+
+                  <div class="border rounded-md rounded-t-lg shadow-lg bg-white w-full max-w-xs w-screen ">
+                    <header class="font-semibold rounded-t-lg bg-gray-300 px-4 py-2">
                       People are waiting for replies!
                     </header>
-                    <div class="p-3 border-t">
-                      <p class="mb-3">
+                    <div class="p-4 border-t">
+                      <p class="mb-4">
                         These are new or open tickets that are assigned to
                         you, unassinged in your group(s) or not assigned to
                         any group.
@@ -707,7 +732,7 @@
                     <span style="padding: 2px 5px; font-size: 0.71rem;"
                       class="font-mono rounded-sm bg-red-600 text-white leading-none">O</span>
                     <span
-                      class="hidden group-hover:block ml-4 mt-10 w-screen max-w-lg absolute top-0 border shadow-lg p-4 bg-white rounded-md z-50 text-gray-900">
+                      class="hidden group-hover:block ml-4 mt-10 w-screen max-w-lg absolute top-0 border shadow-lg p-6 bg-white rounded-md z-50 text-gray-900">
                       <article>
                         <header>
                           <div>
@@ -716,7 +741,7 @@
                             <span class="ml-1">(low)</span>
                           </div>
                         </header>
-                        <section class="mt-1">
+                        <section class="mt-5">
                           <h1 class="text-sm font-semibold mt-3">
                             My Bike was stolen
                           </h1>
@@ -759,7 +784,7 @@
                   <div class="relative group">
                     <span>My Bike got stolen</span>
                     <span
-                      class="hidden group-hover:block ml-4 mt-10 w-screen max-w-lg absolute top-0 border shadow-lg p-4 bg-white rounded-md z-50 text-gray-900">
+                      class="hidden group-hover:block ml-4 mt-10 w-screen max-w-lg absolute top-0 border shadow-lg p-6 bg-white rounded-md z-50 text-gray-900">
                       <article>
                         <header>
                           <div>
@@ -768,7 +793,7 @@
                             <span class="ml-1">(low)</span>
                           </div>
                         </header>
-                        <section class="mt-1">
+                        <section class="mt-5">
                           <h1 class="text-sm font-semibold mt-3">
                             My Bike was stolen
                           </h1>
@@ -824,7 +849,7 @@
                     <span style="padding: 2px 5px; font-size: 0.71rem;"
                       class="font-mono rounded-sm bg-red-600 text-white leading-none">O</span>
                     <span
-                      class="hidden group-hover:block ml-4 mt-10 w-screen max-w-lg absolute top-0 border shadow-lg p-4 bg-white rounded-md z-50 text-gray-900">
+                      class="hidden group-hover:block ml-4 mt-10 w-screen max-w-lg absolute top-0 border shadow-lg p-6 bg-white rounded-md z-50 text-gray-900">
                       <article>
                         <header>
                           <div>
@@ -833,7 +858,7 @@
                             <span class="ml-1">(low)</span>
                           </div>
                         </header>
-                        <section class="mt-1">
+                        <section class="mt-5">
                           <h1 class="text-sm font-semibold mt-3">
                             My Bike was stolen
                           </h1>
@@ -876,7 +901,7 @@
                   <div class="relative group">
                     <span>My Bike got stolen</span>
                     <span
-                      class="hidden group-hover:block ml-4 mt-10 w-screen max-w-lg absolute top-0 border shadow-lg p-4 bg-white rounded-md z-50 text-gray-900">
+                      class="hidden group-hover:block ml-4 mt-10 w-screen max-w-lg absolute top-0 border shadow-lg p-6 bg-white rounded-md z-50 text-gray-900">
                       <article>
                         <header>
                           <div>
@@ -885,7 +910,7 @@
                             <span class="ml-1">(low)</span>
                           </div>
                         </header>
-                        <section class="mt-1">
+                        <section class="mt-5">
                           <h1 class="text-sm font-semibold mt-3">
                             My Bike was stolen
                           </h1>
@@ -941,7 +966,7 @@
                     <span style="padding: 2px 5px; font-size: 0.7rem;"
                       class="font-mono rounded-sm bg-red-600 text-white leading-none">O</span>
                     <span
-                      class="hidden group-hover:block ml-4 mt-10 w-screen max-w-lg absolute top-0 border shadow-lg p-4 bg-white rounded-md z-50 text-gray-900">
+                      class="hidden group-hover:block ml-4 mt-10 w-screen max-w-lg absolute top-0 border shadow-lg p-6 bg-white rounded-md z-50 text-gray-900">
                       <article>
                         <header>
                           <div>
@@ -950,7 +975,7 @@
                             <span class="ml-1">(low)</span>
                           </div>
                         </header>
-                        <section class="mt-1">
+                        <section class="mt-5">
                           <h1 class="text-sm font-semibold mt-3">
                             My Bike was stolen
                           </h1>
@@ -993,7 +1018,7 @@
                   <div class="relative group">
                     <span>My Bike got stolen</span>
                     <span
-                      class="hidden group-hover:block ml-4 mt-10 w-screen max-w-lg absolute top-0 border shadow-lg p-4 bg-white rounded-md z-50 text-gray-900">
+                      class="hidden group-hover:block ml-4 mt-10 w-screen max-w-lg absolute top-0 border shadow-lg p-6 bg-white rounded-md z-50 text-gray-900">
                       <article>
                         <header>
                           <div>
@@ -1002,7 +1027,7 @@
                             <span class="ml-1">(low)</span>
                           </div>
                         </header>
-                        <section class="mt-1">
+                        <section class="mt-5">
                           <h1 class="text-sm font-semibold mt-3">
                             My Bike was stolen
                           </h1>
@@ -1069,7 +1094,7 @@
                     <span style="padding: 2px 5px; font-size: 0.7rem;"
                       class="font-mono rounded-sm bg-red-600 text-white leading-none">O</span>
                     <span
-                      class="hidden group-hover:block ml-4 mt-10 w-screen max-w-lg absolute top-0 border shadow-lg p-4 bg-white rounded-md z-50 text-gray-900">
+                      class="hidden group-hover:block ml-4 mt-10 w-screen max-w-lg absolute top-0 border shadow-lg p-6 bg-white rounded-md z-50 text-gray-900">
                       <article>
                         <header>
                           <div>
@@ -1078,7 +1103,7 @@
                             <span class="ml-1">(Medium)</span>
                           </div>
                         </header>
-                        <section class="mt-1">
+                        <section class="mt-5">
                           <h1 class="text-sm font-semibold mt-3">
                             My Bike was stolen
                           </h1>
@@ -1121,7 +1146,7 @@
                   <div class="relative group">
                     <span>My Bike got stolen</span>
                     <span
-                      class="hidden group-hover:block ml-4 mt-10 w-screen max-w-lg absolute top-0 border shadow-lg p-4 bg-white rounded-md z-50 text-gray-900">
+                      class="hidden group-hover:block ml-4 mt-10 w-screen max-w-lg absolute top-0 border shadow-lg p-6 bg-white rounded-md z-50 text-gray-900">
                       <article>
                         <header>
                           <div>
@@ -1130,7 +1155,7 @@
                             <span class="ml-1">(Medium)</span>
                           </div>
                         </header>
-                        <section class="mt-1">
+                        <section class="mt-5">
                           <h1 class="text-sm font-semibold mt-3">
                             My Bike was stolen
                           </h1>
@@ -1187,7 +1212,7 @@
                     <span style="padding: 2px 5px; font-size: 0.7rem;"
                       class="font-mono rounded-sm bg-red-600 text-white leading-none">O</span>
                     <span
-                      class="hidden group-hover:block ml-4 mt-10 w-screen max-w-lg absolute top-0 border shadow-lg p-4 bg-white rounded-md z-50 text-gray-900">
+                      class="hidden group-hover:block ml-4 mt-10 w-screen max-w-lg absolute top-0 border shadow-lg p-6 bg-white rounded-md z-50 text-gray-900">
                       <article>
                         <header>
                           <div>
@@ -1196,7 +1221,7 @@
                             <span class="ml-1">(Medium)</span>
                           </div>
                         </header>
-                        <section class="mt-1">
+                        <section class="mt-5">
                           <h1 class="text-sm font-semibold mt-3">
                             My Bike was stolen
                           </h1>
@@ -1239,7 +1264,7 @@
                   <div class="relative group">
                     <span>My Bike got stolen</span>
                     <span
-                      class="hidden group-hover:block ml-4 mt-10 w-screen max-w-lg absolute top-0 border shadow-lg p-4 bg-white rounded-md z-50 text-gray-900">
+                      class="hidden group-hover:block ml-4 mt-10 w-screen max-w-lg absolute top-0 border shadow-lg p-6 bg-white rounded-md z-50 text-gray-900">
                       <article>
                         <header>
                           <div>
@@ -1248,7 +1273,7 @@
                             <span class="ml-1">(Medium)</span>
                           </div>
                         </header>
-                        <section class="mt-1">
+                        <section class="mt-5">
                           <h1 class="text-sm font-semibold mt-3">
                             My Bike was stolen
                           </h1>
@@ -1304,7 +1329,7 @@
                     <span style="padding: 2px 5px; font-size: 0.7rem;"
                       class="font-mono rounded-sm bg-red-600 text-white leading-none">O</span>
                     <span
-                      class="hidden group-hover:block ml-4 mt-10 w-screen max-w-lg absolute top-0 border shadow-lg p-4 bg-white rounded-md z-50 text-gray-900">
+                      class="hidden group-hover:block ml-4 mt-10 w-screen max-w-lg absolute top-0 border shadow-lg p-6 bg-white rounded-md z-50 text-gray-900">
                       <article>
                         <header>
                           <div>
@@ -1313,7 +1338,7 @@
                             <span class="ml-1">(Medium)</span>
                           </div>
                         </header>
-                        <section class="mt-1">
+                        <section class="mt-5">
                           <h1 class="text-sm font-semibold mt-3">
                             My Bike was stolen
                           </h1>
@@ -1356,7 +1381,7 @@
                   <div class="relative group">
                     <span>My Bike got stolen</span>
                     <span
-                      class="hidden group-hover:block ml-4 mt-10 w-screen max-w-lg absolute top-0 border shadow-lg p-4 bg-white rounded-md z-50 text-gray-900">
+                      class="hidden group-hover:block ml-4 mt-10 w-screen max-w-lg absolute top-0 border shadow-lg p-6 bg-white rounded-md z-50 text-gray-900">
                       <article>
                         <header>
                           <div>
@@ -1365,7 +1390,7 @@
                             <span class="ml-1">(Medium)</span>
                           </div>
                         </header>
-                        <section class="mt-1">
+                        <section class="mt-5">
                           <h1 class="text-sm font-semibold mt-3">
                             My Bike was stolen
                           </h1>
@@ -1421,7 +1446,7 @@
                     <span style="padding: 2px 5px; font-size: 0.7rem;"
                       class="font-mono rounded-sm bg-red-600 text-white leading-none">O</span>
                     <span
-                      class="hidden group-hover:block ml-4 mt-10 w-screen max-w-lg absolute top-0 border shadow-lg p-4 bg-white rounded-md z-50 text-gray-900">
+                      class="hidden group-hover:block ml-4 mt-10 w-screen max-w-lg absolute top-0 border shadow-lg p-6 bg-white rounded-md z-50 text-gray-900">
                       <article>
                         <header>
                           <div>
@@ -1430,7 +1455,7 @@
                             <span class="ml-1">(Medium)</span>
                           </div>
                         </header>
-                        <section class="mt-1">
+                        <section class="mt-5">
                           <h1 class="text-sm font-semibold mt-3">
                             My Bike was stolen
                           </h1>
@@ -1473,7 +1498,7 @@
                   <div class="relative group">
                     <span>My Bike got stolen</span>
                     <span
-                      class="hidden group-hover:block ml-4 mt-10 w-screen max-w-lg absolute top-0 border shadow-lg p-4 bg-white rounded-md z-50 text-gray-900">
+                      class="hidden group-hover:block ml-4 mt-10 w-screen max-w-lg absolute top-0 border shadow-lg p-6 bg-white rounded-md z-50 text-gray-900">
                       <article>
                         <header>
                           <div>
@@ -1482,7 +1507,7 @@
                             <span class="ml-1">(Medium)</span>
                           </div>
                         </header>
-                        <section class="mt-1">
+                        <section class="mt-5">
                           <h1 class="text-sm font-semibold mt-3">
                             My Bike was stolen
                           </h1>
@@ -1538,7 +1563,7 @@
                     <span style="padding: 2px 5px; font-size: 0.7rem;"
                       class="font-mono rounded-sm bg-red-600 text-white leading-none">O</span>
                     <span
-                      class="hidden group-hover:block ml-4 mt-10 w-screen max-w-lg absolute top-0 border shadow-lg p-4 bg-white rounded-md z-50 text-gray-900">
+                      class="hidden group-hover:block ml-4 mt-10 w-screen max-w-lg absolute top-0 border shadow-lg p-6 bg-white rounded-md z-50 text-gray-900">
                       <article>
                         <header>
                           <div>
@@ -1547,7 +1572,7 @@
                             <span class="ml-1">(Medium)</span>
                           </div>
                         </header>
-                        <section class="mt-1">
+                        <section class="mt-5">
                           <h1 class="text-sm font-semibold mt-3">
                             My Bike was stolen
                           </h1>
@@ -1590,7 +1615,7 @@
                   <div class="relative group">
                     <span>My Bike got stolen</span>
                     <span
-                      class="hidden group-hover:block ml-4 mt-10 w-screen max-w-lg absolute top-0 border shadow-lg p-4 bg-white rounded-md z-50 text-gray-900">
+                      class="hidden group-hover:block ml-4 mt-10 w-screen max-w-lg absolute top-0 border shadow-lg p-6 bg-white rounded-md z-50 text-gray-900">
                       <article>
                         <header>
                           <div>
@@ -1599,7 +1624,7 @@
                             <span class="ml-1">(Medium)</span>
                           </div>
                         </header>
-                        <section class="mt-1">
+                        <section class="mt-5">
                           <h1 class="text-sm font-semibold mt-3">
                             My Bike was stolen
                           </h1>
@@ -1666,7 +1691,7 @@
                     <span style="padding: 2px 5px; font-size: 0.7rem;"
                       class="font-mono rounded-sm bg-red-600 text-white leading-none">O</span>
                     <span
-                      class="hidden group-hover:block ml-4 mt-10 w-screen max-w-lg absolute top-0 border shadow-lg p-4 bg-white rounded-md z-50 text-gray-900">
+                      class="hidden group-hover:block ml-4 mt-10 w-screen max-w-lg absolute top-0 border shadow-lg p-6 bg-white rounded-md z-50 text-gray-900">
                       <article>
                         <header>
                           <div>
@@ -1675,7 +1700,7 @@
                             <span class="ml-1">(High)</span>
                           </div>
                         </header>
-                        <section class="mt-1">
+                        <section class="mt-5">
                           <h1 class="text-sm font-semibold mt-3">
                             My Bike was stolen
                           </h1>
@@ -1718,7 +1743,7 @@
                   <div class="relative group">
                     <span>My Bike got stolen</span>
                     <span
-                      class="hidden group-hover:block ml-4 mt-10 w-screen max-w-lg absolute top-0 border shadow-lg p-4 bg-white rounded-md z-50 text-gray-900">
+                      class="hidden group-hover:block ml-4 mt-10 w-screen max-w-lg absolute top-0 border shadow-lg p-6 bg-white rounded-md z-50 text-gray-900">
                       <article>
                         <header>
                           <div>
@@ -1727,7 +1752,7 @@
                             <span class="ml-1">(High)</span>
                           </div>
                         </header>
-                        <section class="mt-1">
+                        <section class="mt-5">
                           <h1 class="text-sm font-semibold mt-3">
                             My Bike was stolen
                           </h1>
@@ -1784,7 +1809,7 @@
                     <span style="padding: 2px 5px; font-size: 0.7rem;"
                       class="font-mono rounded-sm bg-red-600 text-white leading-none">O</span>
                     <span
-                      class="hidden group-hover:block ml-4 mt-10 w-screen max-w-lg absolute top-0 border shadow-lg p-4 bg-white rounded-md z-50 text-gray-900">
+                      class="hidden group-hover:block ml-4 mt-10 w-screen max-w-lg absolute top-0 border shadow-lg p-6 bg-white rounded-md z-50 text-gray-900">
                       <article>
                         <header>
                           <div>
@@ -1793,7 +1818,7 @@
                             <span class="ml-1">(High)</span>
                           </div>
                         </header>
-                        <section class="mt-1">
+                        <section class="mt-5">
                           <h1 class="text-sm font-semibold mt-3">
                             My Bike was stolen
                           </h1>
@@ -1836,7 +1861,7 @@
                   <div class="relative group">
                     <span>My Bike got stolen</span>
                     <span
-                      class="hidden group-hover:block ml-4 mt-10 w-screen max-w-lg absolute top-0 border shadow-lg p-4 bg-white rounded-md z-50 text-gray-900">
+                      class="hidden group-hover:block ml-4 mt-10 w-screen max-w-lg absolute top-0 border shadow-lg p-6 bg-white rounded-md z-50 text-gray-900">
                       <article>
                         <header>
                           <div>
@@ -1845,7 +1870,7 @@
                             <span class="ml-1">(High)</span>
                           </div>
                         </header>
-                        <section class="mt-1">
+                        <section class="mt-5">
                           <h1 class="text-sm font-semibold mt-3">
                             My Bike was stolen
                           </h1>
@@ -1902,7 +1927,7 @@
                     <span style="padding: 2px 5px; font-size: 0.7rem;"
                       class="font-mono rounded-sm bg-red-600 text-white leading-none">O</span>
                     <span
-                      class="hidden group-hover:block ml-4 mt-10 w-screen max-w-lg absolute top-0 border shadow-lg p-4 bg-white rounded-md z-50 text-gray-900">
+                      class="hidden group-hover:block ml-4 mt-10 w-screen max-w-lg absolute top-0 border shadow-lg p-6 bg-white rounded-md z-50 text-gray-900">
                       <article>
                         <header>
                           <div>
@@ -1911,7 +1936,7 @@
                             <span class="ml-1">(High)</span>
                           </div>
                         </header>
-                        <section class="mt-1">
+                        <section class="mt-5">
                           <h1 class="text-sm font-semibold mt-3">
                             My Bike was stolen
                           </h1>
@@ -1954,7 +1979,7 @@
                   <div class="relative group">
                     <span>My Bike got stolen</span>
                     <span
-                      class="hidden group-hover:block ml-4 mt-10 w-screen max-w-lg absolute top-0 border shadow-lg p-4 bg-white rounded-md z-50 text-gray-900">
+                      class="hidden group-hover:block ml-4 mt-10 w-screen max-w-lg absolute top-0 border shadow-lg p-6 bg-white rounded-md z-50 text-gray-900">
                       <article>
                         <header>
                           <div>
@@ -1963,7 +1988,7 @@
                             <span class="ml-1">(High)</span>
                           </div>
                         </header>
-                        <section class="mt-1">
+                        <section class="mt-5">
                           <h1 class="text-sm font-semibold mt-3">
                             My Bike was stolen
                           </h1>
@@ -2020,7 +2045,7 @@
                     <span style="padding: 2px 5px; font-size: 0.7rem;"
                       class="font-mono rounded-sm bg-red-600 text-white leading-none">O</span>
                     <span
-                      class="hidden group-hover:block ml-4 mt-10 w-screen max-w-lg absolute top-0 border shadow-lg p-4 bg-white rounded-md z-50 text-gray-900">
+                      class="hidden group-hover:block ml-4 mt-10 w-screen max-w-lg absolute top-0 border shadow-lg p-6 bg-white rounded-md z-50 text-gray-900">
                       <article>
                         <header>
                           <div>
@@ -2029,7 +2054,7 @@
                             <span class="ml-1">(High)</span>
                           </div>
                         </header>
-                        <section class="mt-1">
+                        <section class="mt-5">
                           <h1 class="text-sm font-semibold mt-3">
                             My Bike was stolen
                           </h1>
@@ -2072,7 +2097,7 @@
                   <div class="relative group">
                     <span>My Bike got stolen</span>
                     <span
-                      class="hidden group-hover:block ml-4 mt-10 w-screen max-w-lg absolute top-0 border shadow-lg p-4 bg-white rounded-md z-50 text-gray-900">
+                      class="hidden group-hover:block ml-4 mt-10 w-screen max-w-lg absolute top-0 border shadow-lg p-6 bg-white rounded-md z-50 text-gray-900">
                       <article>
                         <header>
                           <div>
@@ -2081,7 +2106,7 @@
                             <span class="ml-1">(High)</span>
                           </div>
                         </header>
-                        <section class="mt-1">
+                        <section class="mt-5">
                           <h1 class="text-sm font-semibold mt-3">
                             My Bike was stolen
                           </h1>
@@ -2138,7 +2163,7 @@
                     <span style="padding: 2px 5px; font-size: 0.7rem;"
                       class="font-mono rounded-sm bg-red-600 text-white leading-none">O</span>
                     <span
-                      class="hidden group-hover:block ml-4 mt-10 w-screen max-w-lg absolute top-0 border shadow-lg p-4 bg-white rounded-md z-50 text-gray-900">
+                      class="hidden group-hover:block ml-4 mt-10 w-screen max-w-lg absolute top-0 border shadow-lg p-6 bg-white rounded-md z-50 text-gray-900">
                       <article>
                         <header>
                           <div>
@@ -2147,7 +2172,7 @@
                             <span class="ml-1">(High)</span>
                           </div>
                         </header>
-                        <section class="mt-1">
+                        <section class="mt-5">
                           <h1 class="text-sm font-semibold mt-3">
                             My Bike was stolen
                           </h1>
@@ -2190,7 +2215,7 @@
                   <div class="relative group">
                     <span>My Bike got stolen</span>
                     <span
-                      class="hidden group-hover:block ml-4 mt-10 w-screen max-w-lg absolute top-0 border shadow-lg p-4 bg-white rounded-md z-50 text-gray-900">
+                      class="hidden group-hover:block ml-4 mt-10 w-screen max-w-lg absolute top-0 border shadow-lg p-6 bg-white rounded-md z-50 text-gray-900">
                       <article>
                         <header>
                           <div>
@@ -2199,7 +2224,7 @@
                             <span class="ml-1">(High)</span>
                           </div>
                         </header>
-                        <section class="mt-1">
+                        <section class="mt-5">
                           <h1 class="text-sm font-semibold mt-3">
                             My Bike was stolen
                           </h1>
@@ -2256,7 +2281,7 @@
                     <span style="padding: 2px 5px; font-size: 0.7rem;"
                       class="font-mono rounded-sm bg-red-600 text-white leading-none">O</span>
                     <span
-                      class="hidden group-hover:block ml-4 mt-10 w-screen max-w-lg absolute top-0 border shadow-lg p-4 bg-white rounded-md z-50 text-gray-900">
+                      class="hidden group-hover:block ml-4 mt-10 w-screen max-w-lg absolute top-0 border shadow-lg p-6 bg-white rounded-md z-50 text-gray-900">
                       <article>
                         <header>
                           <div>
@@ -2265,7 +2290,7 @@
                             <span class="ml-1">(High)</span>
                           </div>
                         </header>
-                        <section class="mt-1">
+                        <section class="mt-5">
                           <h1 class="text-sm font-semibold mt-3">
                             My Bike was stolen
                           </h1>
@@ -2308,7 +2333,7 @@
                   <div class="relative group">
                     <span>My Bike got stolen</span>
                     <span
-                      class="hidden group-hover:block ml-4 mt-10 w-screen max-w-lg absolute top-0 border shadow-lg p-4 bg-white rounded-md z-50 text-gray-900">
+                      class="hidden group-hover:block ml-4 mt-10 w-screen max-w-lg absolute top-0 border shadow-lg p-6 bg-white rounded-md z-50 text-gray-900">
                       <article>
                         <header>
                           <div>
@@ -2317,7 +2342,7 @@
                             <span class="ml-1">(High)</span>
                           </div>
                         </header>
-                        <section class="mt-1">
+                        <section class="mt-5">
                           <h1 class="text-sm font-semibold mt-3">
                             My Bike was stolen
                           </h1>
