@@ -31,7 +31,7 @@
       }
 
       /* zendesk styles */
-      /* .h-16 {
+      .h-16 {
         height: 50px;
       }
       .bg-teal-900 {
@@ -42,11 +42,11 @@
       }
       .hover\:border-green-500:hover {
         border-color: #78a300;
-      } */
+      }
     </style>
   </head>
 
-  <body class="antialiased h-full text-gray-800">
+  <body class="antialiased h-full text-gray-800 overflow-hidden">
     <div class="h-full w-full flex">
       <!-- section body side nav -->
       <nav
@@ -472,7 +472,7 @@
               >
                 <img
                   class="h-full w-full rounded-full mx-auto"
-                  src="assets/me.jpg"
+                  src="https://raw.githubusercontent.com/bluebrown/tailwind-zendesk-clone/master/public/assets/me.jpg"
                 />
               </button>
             </li>
@@ -503,7 +503,7 @@
                   class="cursor-pointer border rounded-md p-3 bg-white flex text-gray-700 mb-2 hover:border-green-500 focus:outline-none focus:border-green-500"
                 >
                   <span class="flex-none pt-1 pr-2">
-                    <img class="h-8 w-8 rounded-md" src="assets/avatar.png" />
+                    <img class="h-8 w-8 rounded-md" src="https://raw.githubusercontent.com/bluebrown/tailwind-zendesk-clone/master/public/assets/avatar.png" />
                   </span>
                   <div class="flex-1">
                     <header class="mb-1">
@@ -799,7 +799,7 @@
                     <button
                       class="focus:outline-none focus:bg-yellow-200 p-2 rounded-l-md border border-r-0 bg-white flex flex-col items-center w-24"
                     >
-                      <p class="font-semibold text-lg">13</p>
+                      <p class="font-semibold text-lg">6</p>
                       <p class="text-sm uppercase text-gray-600">
                         You
                       </p>
@@ -809,7 +809,7 @@
                     <button
                       class="focus:outline-none focus:bg-yellow-200 p-2 border rounded-r-md bg-white flex flex-col items-center w-24 cursor-pointer"
                     >
-                      <p class="font-semibold text-lg">29</p>
+                      <p class="font-semibold text-lg">23</p>
                       <p class="text-sm uppercase text-gray-600">
                         Groups
                       </p>
@@ -870,7 +870,7 @@
             <header class="bg-white border-t flex items-center py-1 px-4">
               <div class="flex">
                 <h2 id="content-caption" class="font-semibold">
-                  Tickets requiring your attention (13)
+                  Tickets requiring your attention (6)
                 </h2>
                 <span class="ml-3 group relative">
                   <button
@@ -927,7 +927,7 @@
               aria-label="open tickets"
               class="border-t w-full min-h-0 h-full flex flex-col"
             >
-              <thead class="flex w-full flex-col px-4 ">
+              <thead class="flex w-full flex-col px-4">
                 <tr class="border-b flex">
                   <th class="font-semibold text-left py-3 pl-3 pr-1 w-24">
                     <input type="checkbox" name="" id="" />
@@ -935,7 +935,9 @@
                   <th class="font-semibold text-left py-3 px-1 w-24 truncate">
                     ID
                   </th>
-                  <th class="font-semibold text-left py-3 px-1 w-full max-w-xs xl:max-w-md truncate">
+                  <th
+                    class="font-semibold text-left py-3 px-1 w-full max-w-xs xl:max-w-lg truncate"
+                  >
                     Subject
                   </th>
                   <th class="font-semibold text-left py-3 px-1 flex-1 truncate">
@@ -953,7 +955,7 @@
                 </tr>
               </thead>
               <tbody
-                class="flex w-full flex-col flex-1 min-h-0 overflow-auto px-4"
+                class="flex w-full flex-col flex-1 min-h-0 overflow-hidden px-4"
               >
                 <!-- low -->
                 <tr class="border-b flex">
@@ -967,161 +969,580 @@
                     </h2>
                   </th>
                 </tr>
-
                 <tr
-                role="row"
-                class="hover:bg-blue-100 border-b flex cursor-pointer"
-              >
-                <td
-                  role="cell"
-                  headers="select"
-                  class="py-3 pl-3 pr-1 w-24 flex items-start"
+                  role="row"
+                  class="hover:bg-blue-100 border-b flex cursor-pointer"
                 >
-                  <input class="mt-1" type="checkbox" />
-                  <div class="ml-auto relative group">
-                    <span
-                      style="padding: 2px 5px; font-size: 0.7rem;"
-                      class="font-mono rounded-sm bg-red-600 text-white leading-none"
-                      >O</span
-                    >
-                    <!-- dropdown -->
-                    <span
-                      class="hidden group-hover:block ml-4 mt-10 w-screen max-w-lg absolute top-0 border shadow-lg p-6 bg-white rounded-md z-50 text-gray-900"
-                    >
-                      <article>
-                        <header>
-                          <div>
-                            <span
-                              class="px-3 py-1 uppercase text-xs leading-none rounded-sm bg-red-600 text-white"
-                              >Open</span
-                            >
-                            <span class="ml-2 text-gray-700"
-                              >Incident #12534</span
-                            >
-                            <span class="ml-1">(Low)</span>
-                          </div>
-                        </header>
-                        <section class="mt-5">
-                          <h1 class="text-sm font-semibold mt-3">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                          </h1>
-                          <p class="mt-3">
-                            Hi, <br />
-                            <br />
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Error accusantium molestias fugit commodi
-                            doloremque. <br /><br />
-                            Lorem ipsum dolor sit amet consectetur,
-                            adipisicing elit. Odit consequatur natus aut
-                            reiciendis nisi sed! Temporibus, quibusdam
-                            voluptates? ...
-                          </p>
-                        </section>
-                        <footer class="mt-4">
-                          <p class="text-gray-600">Latest Comments</p>
-                          <hr class="mt-1" />
-                          <div class="flex mt-3">
-                            <p class="font-semibold">Nico Braun</p>
-                            <p class="ml-auto text-gray-700 text-sm">
-                              Today 13:30
+                  <td
+                    role="cell"
+                    headers="select"
+                    class="py-3 pl-3 pr-1 w-24 flex items-start"
+                  >
+                    <input class="mt-1" type="checkbox" />
+                    <div class="ml-auto relative group">
+                      <span
+                        style="
+                          padding: 2px 5px;
+                          font-size: 0.7rem;
+                          position: relative;
+                          bottom: 2px;
+                        "
+                        class="font-mono rounded-sm bg-red-600 text-white leading-none"
+                        >O</span
+                      >
+                      <!-- dropdown -->
+                      <span
+                        class="hidden group-hover:block ml-4 mt-10 w-screen max-w-lg absolute top-0 border shadow-lg p-6 bg-white rounded-md z-50 text-gray-900"
+                      >
+                        <article>
+                          <header>
+                            <div>
+                              <span
+                                class="px-3 py-1 uppercase text-xs leading-none rounded-sm bg-red-600 text-white"
+                                >Open</span
+                              >
+                              <span class="ml-2 text-gray-700"
+                                >Incident #12534</span
+                              >
+                              <span class="ml-1">(Low)</span>
+                            </div>
+                          </header>
+                          <section class="mt-5">
+                            <h1 class="text-sm font-semibold mt-3">
+                              Quo laudantium error corporis accusamus unde,
+                              labore quidem non officiis.
+                            </h1>
+                            <p class="mt-3">
+                              Hi Team,
+                              <br />
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Error accusantium molestias fugit commodi
+                              doloremque. <br /><br />
+                              Lorem ipsum dolor sit amet consectetur,
+                              adipisicing elit? ...
                             </p>
-                          </div>
-                          <p class="mt-2">
-                            Dolore odio error inventore sint et dolorum
-                            asperiores exercitationem, quisquam esse tempora
-                            aliquam voluptates quibusdam quae debitis
-                            laboriosam iure ea quos.
-                          </p>
-                        </footer>
-                      </article>
-                    </span>
-                    <!-- end dropdown -->
-                  </div>
-                </td>
-                <td class="py-3 px-1 w-24">
-                  #12534
-                </td>
-                <td class="py-3 px-1 w-full max-w-xs xl:max-w-md">
-                  <div class="relative group w-full">
-                    <p class="w-full truncate">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                    <!-- dropdown -->
-                    <span
-                      class="hidden group-hover:block ml-4 mt-10 w-screen max-w-lg absolute top-0 border shadow-lg p-6 bg-white rounded-md z-50 text-gray-900"
-                    >
-                      <article>
-                        <header>
-                          <div>
-                            <span
-                              class="px-3 py-1 uppercase text-xs leading-none rounded-sm bg-red-600 text-white"
-                              >Open</span
-                            >
-                            <span class="ml-2 text-gray-700"
-                              >Incident #12534</span
-                            >
-                            <span class="ml-1">(Low)</span>
-                          </div>
-                        </header>
-                        <section class="mt-5">
-                          <h1 class="text-sm font-semibold mt-3">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                          </h1>
-                          <p class="mt-3">
-                            Hi, <br />
-                            <br />
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Error accusantium molestias fugit commodi
-                            doloremque. <br /><br />
-                            Lorem ipsum dolor sit amet consectetur,
-                            adipisicing elit. Odit consequatur natus aut
-                            reiciendis nisi sed! Temporibus, quibusdam
-                            voluptates? ...
-                          </p>
-                        </section>
-                        <footer class="mt-4">
-                          <p class="text-gray-600">Latest Comments</p>
-                          <hr class="mt-1" />
-                          <div class="flex mt-3">
-                            <p class="font-semibold">Nico Braun</p>
-                            <p class="ml-auto text-gray-700 text-sm">
-                              Today 13:30
+                          </section>
+                          <footer class="mt-4">
+                            <p class="text-gray-600">Latest Comments</p>
+                            <hr class="mt-1" />
+                            <div class="flex mt-3">
+                              <p class="font-semibold">Nico Braun</p>
+                              <p class="ml-auto text-gray-700 text-sm">
+                                Yesterday 10:33
+                              </p>
+                            </div>
+                            <p class="mt-2">
+                              Dolore odio error inventore sint et dolorum
+                              asperiores exercitationem, quisquam esse.
                             </p>
-                          </div>
-                          <p class="mt-2">
-                            Dolore odio error inventore sint et dolorum
-                            asperiores exercitationem, quisquam esse tempora
-                            aliquam voluptates quibusdam quae debitis
-                            laboriosam iure ea quos.
-                          </p>
-                        </footer>
-                      </article>
-                    </span>
-                    <!-- end dropdown -->
-                  </div>
-                </td>
-                <td class="py-3 px-1 flex-1 truncate">
-                  Jim Beam
-                </td>
-                <td class="py-3 px-1 flex-1 truncate">
-                  Friday 10:29
-                </td>
-                <td class="py-3 px-1 flex-1 truncate">
-                  UK Application Support
-                </td>
-                <td class="py-3 px-1 flex-1 truncate">
-                  Nico Braun
-                </td>
-              </tr>
-
-
-
-
-
-
-
-
-
-
-
+                          </footer>
+                        </article>
+                      </span>
+                      <!-- end dropdown -->
+                    </div>
+                  </td>
+                  <td class="py-3 px-1 w-24">
+                    #12534
+                  </td>
+                  <td class="py-3 px-1 w-full max-w-xs xl:max-w-lg">
+                    <div class="relative group w-full">
+                      <p class="w-full truncate">
+                        Quo laudantium error corporis accusamus unde, labore
+                        quidem non officiis.
+                      </p>
+                      <!-- dropdown -->
+                      <span
+                        class="hidden group-hover:block ml-4 mt-10 w-screen max-w-lg absolute top-0 border shadow-lg p-6 bg-white rounded-md z-50 text-gray-900"
+                      >
+                        <article>
+                          <header>
+                            <div>
+                              <span
+                                class="px-3 py-1 uppercase text-xs leading-none rounded-sm bg-red-600 text-white"
+                                >Open</span
+                              >
+                              <span class="ml-2 text-gray-700"
+                                >Incident #12534</span
+                              >
+                              <span class="ml-1">(Low)</span>
+                            </div>
+                          </header>
+                          <section class="mt-5">
+                            <h1 class="text-sm font-semibold mt-3">
+                              Quo laudantium error corporis accusamus unde,
+                              labore quidem non officiis.
+                            </h1>
+                            <p class="mt-3">
+                              Hi Team,
+                              <br />
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Error accusantium molestias fugit commodi
+                              doloremque. <br /><br />
+                              Lorem ipsum dolor sit amet consectetur,
+                              adipisicing elit? ...
+                            </p>
+                          </section>
+                          <footer class="mt-4">
+                            <p class="text-gray-600">Latest Comments</p>
+                            <hr class="mt-1" />
+                            <div class="flex mt-3">
+                              <p class="font-semibold">Nico Braun</p>
+                              <p class="ml-auto text-gray-700 text-sm">
+                                Yesterday 10:33
+                              </p>
+                            </div>
+                            <p class="mt-2">
+                              Dolore odio error inventore sint et dolorum
+                              asperiores exercitationem, quisquam esse.
+                            </p>
+                          </footer>
+                        </article>
+                      </span>
+                      <!-- end dropdown -->
+                    </div>
+                  </td>
+                  <td class="py-3 px-1 flex-1 truncate">
+                    Marla Darsuz
+                  </td>
+                  <td class="py-3 px-1 flex-1 truncate">
+                    Tuesday 09:56
+                  </td>
+                  <td class="py-3 px-1 flex-1 truncate">
+                    UK Support
+                  </td>
+                  <td class="py-3 px-1 flex-1 truncate">
+                    Nico Braun
+                  </td>
+                </tr>
+                <tr
+                  role="row"
+                  class="hover:bg-blue-100 border-b flex cursor-pointer"
+                >
+                  <td
+                    role="cell"
+                    headers="select"
+                    class="py-3 pl-3 pr-1 w-24 flex items-start"
+                  >
+                    <input class="mt-1" type="checkbox" />
+                    <div class="ml-auto relative group">
+                      <span
+                        style="
+                          padding: 2px 5px;
+                          font-size: 0.7rem;
+                          position: relative;
+                          bottom: 2px;
+                        "
+                        class="font-mono rounded-sm bg-red-600 text-white leading-none"
+                        >O</span
+                      >
+                      <!-- dropdown -->
+                      <span
+                        class="hidden group-hover:block ml-4 mt-10 w-screen max-w-lg absolute top-0 border shadow-lg p-6 bg-white rounded-md z-50 text-gray-900"
+                      >
+                        <article>
+                          <header>
+                            <div>
+                              <span
+                                class="px-3 py-1 uppercase text-xs leading-none rounded-sm bg-red-600 text-white"
+                                >Open</span
+                              >
+                              <span class="ml-2 text-gray-700"
+                                >Incident #12534</span
+                              >
+                              <span class="ml-1">(Low)</span>
+                            </div>
+                          </header>
+                          <section class="mt-5">
+                            <h1 class="text-sm font-semibold mt-3">
+                              Lorem ipsum dolor sit amet, consectetur
+                              adipisicing elit.
+                            </h1>
+                            <p class="mt-3">
+                              Hi, <br />
+                              <br />
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Error accusantium molestias fugit commodi
+                              doloremque. <br /><br />
+                              Lorem ipsum dolor sit amet consectetur,
+                              adipisicing elit. Odit consequatur natus aut
+                              reiciendis nisi sed! Temporibus, quibusdam
+                              voluptates? ...
+                            </p>
+                          </section>
+                          <footer class="mt-4">
+                            <p class="text-gray-600">Latest Comments</p>
+                            <hr class="mt-1" />
+                            <div class="flex mt-3">
+                              <p class="font-semibold">Nico Braun</p>
+                              <p class="ml-auto text-gray-700 text-sm">
+                                Today 13:30
+                              </p>
+                            </div>
+                            <p class="mt-2">
+                              Dolore odio error inventore sint et dolorum
+                              asperiores exercitationem, quisquam esse tempora
+                              aliquam voluptates quibusdam quae debitis
+                              laboriosam iure ea quos.
+                            </p>
+                          </footer>
+                        </article>
+                      </span>
+                      <!-- end dropdown -->
+                    </div>
+                  </td>
+                  <td class="py-3 px-1 w-24">
+                    #12534
+                  </td>
+                  <td class="py-3 px-1 w-full max-w-xs xl:max-w-lg">
+                    <div class="relative group w-full">
+                      <p class="w-full truncate">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit.
+                      </p>
+                      <!-- dropdown -->
+                      <span
+                        class="hidden group-hover:block ml-4 mt-10 w-screen max-w-lg absolute top-0 border shadow-lg p-6 bg-white rounded-md z-50 text-gray-900"
+                      >
+                        <article>
+                          <header>
+                            <div>
+                              <span
+                                class="px-3 py-1 uppercase text-xs leading-none rounded-sm bg-red-600 text-white"
+                                >Open</span
+                              >
+                              <span class="ml-2 text-gray-700"
+                                >Incident #12534</span
+                              >
+                              <span class="ml-1">(Low)</span>
+                            </div>
+                          </header>
+                          <section class="mt-5">
+                            <h1 class="text-sm font-semibold mt-3">
+                              Lorem ipsum dolor sit amet, consectetur
+                              adipisicing elit.
+                            </h1>
+                            <p class="mt-3">
+                              Hi, <br />
+                              <br />
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Error accusantium molestias fugit commodi
+                              doloremque. <br /><br />
+                              Lorem ipsum dolor sit amet consectetur,
+                              adipisicing elit. Odit consequatur natus aut
+                              reiciendis nisi sed! Temporibus, quibusdam
+                              voluptates? ...
+                            </p>
+                          </section>
+                          <footer class="mt-4">
+                            <p class="text-gray-600">Latest Comments</p>
+                            <hr class="mt-1" />
+                            <div class="flex mt-3">
+                              <p class="font-semibold">Nico Braun</p>
+                              <p class="ml-auto text-gray-700 text-sm">
+                                Today 13:30
+                              </p>
+                            </div>
+                            <p class="mt-2">
+                              Dolore odio error inventore sint et dolorum
+                              asperiores exercitationem, quisquam esse tempora
+                              aliquam voluptates quibusdam quae debitis
+                              laboriosam iure ea quos.
+                            </p>
+                          </footer>
+                        </article>
+                      </span>
+                      <!-- end dropdown -->
+                    </div>
+                  </td>
+                  <td class="py-3 px-1 flex-1 truncate">
+                    Jim Beam
+                  </td>
+                  <td class="py-3 px-1 flex-1 truncate">
+                    Friday 10:29
+                  </td>
+                  <td class="py-3 px-1 flex-1 truncate">
+                    UK Support
+                  </td>
+                  <td class="py-3 px-1 flex-1 truncate">
+                    Nico Braun
+                  </td>
+                </tr>
+                <tr
+                  role="row"
+                  class="hover:bg-blue-100 border-b flex cursor-pointer"
+                >
+                  <td
+                    role="cell"
+                    headers="select"
+                    class="py-3 pl-3 pr-1 w-24 flex items-start"
+                  >
+                    <input class="mt-1" type="checkbox" />
+                    <div class="ml-auto relative group">
+                      <span
+                        style="
+                          padding: 2px 5px;
+                          font-size: 0.7rem;
+                          position: relative;
+                          bottom: 2px;
+                        "
+                        class="font-mono rounded-sm bg-yellow-400 text-black leading-none"
+                        >N</span
+                      >
+                      <!-- dropdown -->
+                      <span
+                        class="hidden group-hover:block ml-4 mt-10 w-screen max-w-lg absolute top-0 border shadow-lg p-6 bg-white rounded-md z-50 text-gray-900"
+                      >
+                        <article>
+                          <header>
+                            <div>
+                              <span
+                                class="px-3 py-1 uppercase text-xs leading-none rounded-sm bg-yellow-400 text-black"
+                                >New</span
+                              >
+                              <span class="ml-2 text-gray-700"
+                                >Incident #12534</span
+                              >
+                              <span class="ml-1">(Low)</span>
+                            </div>
+                          </header>
+                          <section class="mt-5">
+                            <h1 class="text-sm font-semibold mt-3">
+                              Excepturi at labore vel accusamus exercitationem
+                              quam, amet provident!
+                            </h1>
+                            <p class="mt-3">
+                              Lorem ipsum dolor sit amet consectetur,
+                              adipisicing elit. Odit consequatur natus aut
+                              reiciendis nisi sed! Temporibus, quibusdam
+                              voluptates? ...
+                            </p>
+                          </section>
+                          <footer class="mt-4 hidden">
+                            <p class="text-gray-600">Latest Comments</p>
+                            <hr class="mt-1" />
+                            <div class="flex mt-3">
+                              <p class="font-semibold"></p>
+                              <p class="ml-auto text-gray-700 text-sm"></p>
+                            </div>
+                            <p class="mt-2"></p>
+                          </footer>
+                        </article>
+                      </span>
+                      <!-- end dropdown -->
+                    </div>
+                  </td>
+                  <td class="py-3 px-1 w-24">
+                    #12534
+                  </td>
+                  <td class="py-3 px-1 w-full max-w-xs xl:max-w-lg">
+                    <div class="relative group w-full">
+                      <p class="w-full truncate">
+                        Excepturi at labore vel accusamus exercitationem quam,
+                        amet provident!
+                      </p>
+                      <!-- dropdown -->
+                      <span
+                        class="hidden group-hover:block ml-4 mt-10 w-screen max-w-lg absolute top-0 border shadow-lg p-6 bg-white rounded-md z-50 text-gray-900"
+                      >
+                        <article>
+                          <header>
+                            <div>
+                              <span
+                                class="px-3 py-1 uppercase text-xs leading-none rounded-sm bg-yellow-400 text-black"
+                                >New</span
+                              >
+                              <span class="ml-2 text-gray-700"
+                                >Incident #12534</span
+                              >
+                              <span class="ml-1">(Low)</span>
+                            </div>
+                          </header>
+                          <section class="mt-5">
+                            <h1 class="text-sm font-semibold mt-3">
+                              Excepturi at labore vel accusamus exercitationem
+                              quam, amet provident!
+                            </h1>
+                            <p class="mt-3">
+                              Lorem ipsum dolor sit amet consectetur,
+                              adipisicing elit. Odit consequatur natus aut
+                              reiciendis nisi sed! Temporibus, quibusdam
+                              voluptates? ...
+                            </p>
+                          </section>
+                          <footer class="mt-4 hidden">
+                            <p class="text-gray-600">Latest Comments</p>
+                            <hr class="mt-1" />
+                            <div class="flex mt-3">
+                              <p class="font-semibold"></p>
+                              <p class="ml-auto text-gray-700 text-sm"></p>
+                            </div>
+                            <p class="mt-2"></p>
+                          </footer>
+                        </article>
+                      </span>
+                      <!-- end dropdown -->
+                    </div>
+                  </td>
+                  <td class="py-3 px-1 flex-1 truncate">
+                    Paul Ferrez
+                  </td>
+                  <td class="py-3 px-1 flex-1 truncate">
+                    Today 13:45
+                  </td>
+                  <td class="py-3 px-1 flex-1 truncate">
+                    -
+                  </td>
+                  <td class="py-3 px-1 flex-1 truncate">
+                    -
+                  </td>
+                </tr>
+                <tr
+                  role="row"
+                  class="hover:bg-blue-100 border-b flex cursor-pointer"
+                >
+                  <td
+                    role="cell"
+                    headers="select"
+                    class="py-3 pl-3 pr-1 w-24 flex items-start"
+                  >
+                    <input class="mt-1" type="checkbox" />
+                    <div class="ml-auto relative group">
+                      <span
+                        style="
+                          padding: 2px 5px;
+                          font-size: 0.7rem;
+                          position: relative;
+                          bottom: 2px;
+                        "
+                        class="font-mono rounded-sm bg-red-600 text-white leading-none"
+                        >O</span
+                      >
+                      <!-- dropdown -->
+                      <span
+                        class="hidden group-hover:block ml-4 mt-10 w-screen max-w-lg absolute top-0 border shadow-lg p-6 bg-white rounded-md z-50 text-gray-900"
+                      >
+                        <article>
+                          <header>
+                            <div>
+                              <span
+                                class="px-3 py-1 uppercase text-xs leading-none rounded-sm bg-red-600 text-white"
+                                >Open</span
+                              >
+                              <span class="ml-2 text-gray-700"
+                                >Incident #12534</span
+                              >
+                              <span class="ml-1">(Low)</span>
+                            </div>
+                          </header>
+                          <section class="mt-5">
+                            <h1 class="text-sm font-semibold mt-3">
+                              impedit possimus praesentium voluptatum omnis
+                              assumenda rem autem magni consequatur nostrum
+                              distinctio unde.
+                            </h1>
+                            <p class="mt-3">
+                              Hi Team,
+                              <br />
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Error accusantium molestias fugit commodi
+                              doloremque. <br /><br />
+                              Lorem ipsum dolor sit amet consectetur,
+                              adipisicing elit? ...
+                            </p>
+                          </section>
+                          <footer class="mt-4">
+                            <p class="text-gray-600">Latest Comments</p>
+                            <hr class="mt-1" />
+                            <div class="flex mt-3">
+                              <p class="font-semibold">Nico Braun</p>
+                              <p class="ml-auto text-gray-700 text-sm">
+                                Yesterday 10:33
+                              </p>
+                            </div>
+                            <p class="mt-2">
+                              Dolore odio error inventore sint et dolorum
+                              asperiores exercitationem, quisquam esse.
+                            </p>
+                          </footer>
+                        </article>
+                      </span>
+                      <!-- end dropdown -->
+                    </div>
+                  </td>
+                  <td class="py-3 px-1 w-24">
+                    #12534
+                  </td>
+                  <td class="py-3 px-1 w-full max-w-xs xl:max-w-lg">
+                    <div class="relative group w-full">
+                      <p class="w-full truncate">
+                        impedit possimus praesentium voluptatum omnis assumenda
+                        rem autem magni consequatur nostrum distinctio unde.
+                      </p>
+                      <!-- dropdown -->
+                      <span
+                        class="hidden group-hover:block ml-4 mt-10 w-screen max-w-lg absolute top-0 border shadow-lg p-6 bg-white rounded-md z-50 text-gray-900"
+                      >
+                        <article>
+                          <header>
+                            <div>
+                              <span
+                                class="px-3 py-1 uppercase text-xs leading-none rounded-sm bg-red-600 text-white"
+                                >Open</span
+                              >
+                              <span class="ml-2 text-gray-700"
+                                >Incident #12534</span
+                              >
+                              <span class="ml-1">(Low)</span>
+                            </div>
+                          </header>
+                          <section class="mt-5">
+                            <h1 class="text-sm font-semibold mt-3">
+                              impedit possimus praesentium voluptatum omnis
+                              assumenda rem autem magni consequatur nostrum
+                              distinctio unde.
+                            </h1>
+                            <p class="mt-3">
+                              Hi Team,
+                              <br />
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Error accusantium molestias fugit commodi
+                              doloremque. <br /><br />
+                              Lorem ipsum dolor sit amet consectetur,
+                              adipisicing elit? ...
+                            </p>
+                          </section>
+                          <footer class="mt-4">
+                            <p class="text-gray-600">Latest Comments</p>
+                            <hr class="mt-1" />
+                            <div class="flex mt-3">
+                              <p class="font-semibold">Nico Braun</p>
+                              <p class="ml-auto text-gray-700 text-sm">
+                                Yesterday 10:33
+                              </p>
+                            </div>
+                            <p class="mt-2">
+                              Dolore odio error inventore sint et dolorum
+                              asperiores exercitationem, quisquam esse.
+                            </p>
+                          </footer>
+                        </article>
+                      </span>
+                      <!-- end dropdown -->
+                    </div>
+                  </td>
+                  <td class="py-3 px-1 flex-1 truncate">
+                    Sara Dechicco
+                  </td>
+                  <td class="py-3 px-1 flex-1 truncate">
+                    Thursday 09:22
+                  </td>
+                  <td class="py-3 px-1 flex-1 truncate">
+                    UK Support
+                  </td>
+                  <td class="py-3 px-1 flex-1 truncate">
+                    Nico Braun
+                  </td>
+                </tr>
                 <!-- medium -->
                 <tr class="border-b flex">
                   <th
@@ -1134,11 +1555,308 @@
                     </h2>
                   </th>
                 </tr>
-
-    
-
+                <tr
+                  role="row"
+                  class="hover:bg-blue-100 border-b flex cursor-pointer"
+                >
+                  <td
+                    role="cell"
+                    headers="select"
+                    class="py-3 pl-3 pr-1 w-24 flex items-start"
+                  >
+                    <input class="mt-1" type="checkbox" />
+                    <div class="ml-auto relative group">
+                      <span
+                        style="
+                          padding: 2px 5px;
+                          font-size: 0.7rem;
+                          position: relative;
+                          bottom: 2px;
+                        "
+                        class="font-mono rounded-sm bg-yellow-400 text-black leading-none"
+                        >N</span
+                      >
+                      <!-- dropdown -->
+                      <span
+                        class="hidden group-hover:block ml-4 mt-10 w-screen max-w-lg absolute top-0 border shadow-lg p-6 bg-white rounded-md z-50 text-gray-900"
+                      >
+                        <article>
+                          <header>
+                            <div>
+                              <span
+                                class="px-3 py-1 uppercase text-xs leading-none rounded-sm bg-yellow-400 text-black"
+                                >New</span
+                              >
+                              <span class="ml-2 text-gray-700"
+                                >Incident #12534</span
+                              >
+                              <span class="ml-1">(Medium)</span>
+                            </div>
+                          </header>
+                          <section class="mt-5">
+                            <h1 class="text-sm font-semibold mt-3">
+                              Excepturi at labore vel accusamus exercitationem
+                              assumenda ex incidunt eum quam, amet provident!
+                            </h1>
+                            <p class="mt-3">
+                              Hi, <br />
+                              <br />
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Error accusantium molestias fugit commodi
+                              doloremque. <br /><br />
+                              Lorem ipsum dolor sit amet consectetur,
+                              adipisicing elit. Odit consequatur natus aut
+                              reiciendis nisi sed! Temporibus, quibusdam
+                              voluptates? ...
+                            </p>
+                          </section>
+                          <footer class="mt-4 hidden">
+                            <p class="text-gray-600">Latest Comments</p>
+                            <hr class="mt-1" />
+                            <div class="flex mt-3">
+                              <p class="font-semibold"></p>
+                              <p class="ml-auto text-gray-700 text-sm"></p>
+                            </div>
+                            <p class="mt-2"></p>
+                          </footer>
+                        </article>
+                      </span>
+                      <!-- end dropdown -->
+                    </div>
+                  </td>
+                  <td class="py-3 px-1 w-24">
+                    #12534
+                  </td>
+                  <td class="py-3 px-1 w-full max-w-xs xl:max-w-lg">
+                    <div class="relative group w-full">
+                      <p class="w-full truncate">
+                        Excepturi at labore vel accusamus exercitationem
+                        assumenda ex incidunt eum quam, amet provident!
+                      </p>
+                      <!-- dropdown -->
+                      <span
+                        class="hidden group-hover:block ml-4 mt-10 w-screen max-w-lg absolute top-0 border shadow-lg p-6 bg-white rounded-md z-50 text-gray-900"
+                      >
+                        <article>
+                          <header>
+                            <div>
+                              <span
+                                class="px-3 py-1 uppercase text-xs leading-none rounded-sm bg-yellow-400 text-black"
+                                >New</span
+                              >
+                              <span class="ml-2 text-gray-700"
+                                >Incident #12534</span
+                              >
+                              <span class="ml-1">(Medium)</span>
+                            </div>
+                          </header>
+                          <section class="mt-5">
+                            <h1 class="text-sm font-semibold mt-3">
+                              Excepturi at labore vel accusamus exercitationem
+                              assumenda ex incidunt eum quam, amet provident!
+                            </h1>
+                            <p class="mt-3">
+                              Hi, <br />
+                              <br />
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Error accusantium molestias fugit commodi
+                              doloremque. <br /><br />
+                              Lorem ipsum dolor sit amet consectetur,
+                              adipisicing elit. Odit consequatur natus aut
+                              reiciendis nisi sed! Temporibus, quibusdam
+                              voluptates? ...
+                            </p>
+                          </section>
+                          <footer class="mt-4 hidden">
+                            <p class="text-gray-600"></p>
+                            <hr class="mt-1" />
+                            <div class="flex mt-3">
+                              <p class="font-semibold"></p>
+                              <p class="ml-auto text-gray-700 text-sm"></p>
+                            </div>
+                            <p class="mt-2">
+                              Dolore odio error inventore sint et dolorum
+                              asperiores exercitationem, quisquam esse tempora
+                              aliquam voluptates quibusdam quae debitis
+                              laboriosam iure ea quos.
+                            </p>
+                          </footer>
+                        </article>
+                      </span>
+                      <!-- end dropdown -->
+                    </div>
+                  </td>
+                  <td class="py-3 px-1 flex-1 truncate">
+                    Freddy Murro
+                  </td>
+                  <td class="py-3 px-1 flex-1 truncate">
+                    Today 12:13
+                  </td>
+                  <td class="py-3 px-1 flex-1 truncate">
+                    -
+                  </td>
+                  <td class="py-3 px-1 flex-1 truncate">
+                    -
+                  </td>
+                </tr>
+                <tr
+                  role="row"
+                  class="hover:bg-blue-100 border-b flex cursor-pointer"
+                >
+                  <td
+                    role="cell"
+                    headers="select"
+                    class="py-3 pl-3 pr-1 w-24 flex items-start"
+                  >
+                    <input class="mt-1" type="checkbox" />
+                    <div class="ml-auto relative group">
+                      <span
+                        style="
+                          padding: 2px 5px;
+                          font-size: 0.7rem;
+                          position: relative;
+                          bottom: 2px;
+                        "
+                        class="font-mono rounded-sm bg-red-600 text-white leading-none"
+                        >O</span
+                      >
+                      <!-- dropdown -->
+                      <span
+                        class="hidden group-hover:block ml-4 mt-10 w-screen max-w-lg absolute top-0 border shadow-lg p-6 bg-white rounded-md z-50 text-gray-900"
+                      >
+                        <article>
+                          <header>
+                            <div>
+                              <span
+                                class="px-3 py-1 uppercase text-xs leading-none rounded-sm bg-red-600 text-white"
+                                >Open</span
+                              >
+                              <span class="ml-2 text-gray-700"
+                                >Incident #12534</span
+                              >
+                              <span class="ml-1">(Medium)</span>
+                            </div>
+                          </header>
+                          <section class="mt-5">
+                            <h1 class="text-sm font-semibold mt-3">
+                              Odit consequatur natus aut reiciendis nisi sed!
+                            </h1>
+                            <p class="mt-3">
+                              Hi, <br />
+                              <br />
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Error accusantium molestias fugit commodi
+                              doloremque. <br /><br />
+                              Lorem ipsum dolor sit amet consectetur,
+                              adipisicing elit. Temporibus, quibusdam
+                              voluptates? ...
+                            </p>
+                          </section>
+                          <footer class="mt-4">
+                            <p class="text-gray-600">Latest Comments</p>
+                            <hr class="mt-1" />
+                            <div class="flex mt-3">
+                              <p aria-label="commenter" class="font-semibold">
+                                Nico Braun
+                              </p>
+                              <p
+                                aria-label="time"
+                                class="ml-auto text-gray-700 text-sm"
+                              >
+                                Today 06:34
+                              </p>
+                            </div>
+                            <p aria-label="comment" class="mt-2">
+                              Quos explicabo sed nisi totam dolores deleniti
+                              blanditiis culpa dolor provident perferendis
+                              sapiente corrupti repudiandae ea dolore.
+                            </p>
+                          </footer>
+                        </article>
+                      </span>
+                      <!-- end dropdown -->
+                    </div>
+                  </td>
+                  <td class="py-3 px-1 w-24">
+                    #12534
+                  </td>
+                  <td class="py-3 px-1 w-full max-w-xs xl:max-w-lg">
+                    <div class="relative group w-full">
+                      <p class="w-full truncate">
+                        Odit consequatur natus aut reiciendis nisi sed!
+                      </p>
+                      <!-- dropdown -->
+                      <span
+                        class="hidden group-hover:block ml-4 mt-10 w-screen max-w-lg absolute top-0 border shadow-lg p-6 bg-white rounded-md z-50 text-gray-900"
+                      >
+                        <article>
+                          <header>
+                            <div>
+                              <span
+                                class="px-3 py-1 uppercase text-xs leading-none rounded-sm bg-red-600 text-white"
+                                >Open</span
+                              >
+                              <span class="ml-2 text-gray-700"
+                                >Incident #12534</span
+                              >
+                              <span class="ml-1">(Medium)</span>
+                            </div>
+                          </header>
+                          <section class="mt-5">
+                            <h1 class="text-sm font-semibold mt-3">
+                              Odit consequatur natus aut reiciendis nisi sed!
+                            </h1>
+                            <p class="mt-3">
+                              Hi, <br />
+                              <br />
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Error accusantium molestias fugit commodi
+                              doloremque. <br /><br />
+                              Lorem ipsum dolor sit amet consectetur,
+                              adipisicing elit. Temporibus, quibusdam
+                              voluptates? ...
+                            </p>
+                          </section>
+                          <footer class="mt-4">
+                            <p class="text-gray-600">Latest Comments</p>
+                            <hr class="mt-1" />
+                            <div class="flex mt-3">
+                              <p aria-label="commenter" class="font-semibold">
+                                Nico Braun
+                              </p>
+                              <p
+                                aria-label="time"
+                                class="ml-auto text-gray-700 text-sm"
+                              >
+                                Today 06:34
+                              </p>
+                            </div>
+                            <p aria-label="comment" class="mt-2">
+                              Quos explicabo sed nisi totam dolores deleniti
+                              blanditiis culpa dolor provident perferendis
+                              sapiente corrupti repudiandae ea dolore.
+                            </p>
+                          </footer>
+                        </article>
+                      </span>
+                      <!-- end dropdown -->
+                    </div>
+                  </td>
+                  <td class="py-3 px-1 flex-1 truncate">
+                    Carla Sandaers
+                  </td>
+                  <td class="py-3 px-1 flex-1 truncate">
+                    Today 08:13
+                  </td>
+                  <td class="py-3 px-1 flex-1 truncate">
+                    -
+                  </td>
+                  <td class="py-3 px-1 flex-1 truncate">
+                    -
+                  </td>
+                </tr>
                 <!-- high -->
-                <tr class="border-b flex">
+                <tr class="border-b flex hidden">
                   <th
                     class="bg-gray-100 text-left px-3 py-2 flex-1"
                     colspan="7"
@@ -1149,7 +1867,6 @@
                     </h2>
                   </th>
                 </tr>
-
               </tbody>
             </table>
 
